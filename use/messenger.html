@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Переписка — Джун</title>
+<meta name="description" content="Личная переписка, разговор на нескольких человек и именованные группы.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html" aria-current="page">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../use/index.html">Работа</a> / <span>Переписка</span></p>
+    <h1>Переписка</h1>
+    <p class="lead">Личная переписка, разговор на нескольких человек и именованные группы.</p>
+    
+    <div class="text"><p>Переписка в Джуне устроена вокруг состава участников, а не вокруг
+«чатов»: разговор с теми же людьми — это всегда тот же разговор, а не
+второй такой же.</p>
+<h2 id="самые-частые-фразы">Самые частые фразы</h2>
+<p><span class="phrase"><code>переписка</code> <span class="phrase-arrow">→</span> откроется список разговоров</span></p>
+<p><span class="phrase"><code>напиши Саше</code> <span class="phrase-arrow">→</span> откроется переписка с Сашей</span></p>
+<p><span class="phrase"><code>создай группу</code> <span class="phrase-arrow">→</span> откроется новая группа: название и участники</span></p>
+<p><span class="phrase"><code>найди в переписке отчёт</code> <span class="phrase-arrow">→</span> покажет сообщения, где встречается слово</span></p>
+<h2 id="разговор-на-нескольких-человек">Разговор на нескольких человек</h2>
+<p>Напишите нескольким людям сразу — «напиши Саше, Пете и Ире», — и
+получится разговор на троих. Завтра та же фраза откроет его же, а не
+заведёт второй: разговор узнаётся по составу.</p>
+<p>Такой разговор становится именованной группой, когда ему дают имя. У
+именованной группы есть название, и состав в ней меняется командами.</p>
+<h2 id="команды-состава">Команды состава</h2>
+<p>Внутри переписки текст принадлежит ей: то, что вы пишете, уходит
+собеседнику, а не маршрутизатору. Поэтому состав меняется командами со
+слэшем:</p>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/добавь Петю</code></td>
+<td>добавляет участника</td>
+</tr>
+<tr>
+<td><code>/убери Петю</code></td>
+<td>убирает участника</td>
+</tr>
+<tr>
+<td><code>/участники</code></td>
+<td>показывает состав</td>
+</tr>
+<tr>
+<td><code>/переименуй Планёрка</code></td>
+<td>меняет название группы</td>
+</tr>
+<tr>
+<td><code>/выйти</code></td>
+<td>выводит вас из группы</td>
+</tr>
+<tr>
+<td><code>/закрой</code></td>
+<td>закрывает группу для всех</td>
+</tr>
+</tbody>
+</table>
+<h2 id="упоминания">Упоминания</h2>
+<p><code>@Саша</code> в тексте — это упоминание: Саша получит уведомление, даже если
+не читает разговор прямо сейчас. Упоминание в группе из десяти человек
+адресует сообщение одному.</p>
+<h2 id="что-видит-администратор">Что видит администратор</h2>
+<p>Ничего сверх своей переписки. Чужие разговоры администратору не видны —
+ни списком, ни поиском. Это решение продукта, а не недоделка прав.</p>
+<h2 id="если-не-вышло">Если не вышло</h2>
+<ul>
+<li>Сообщение не дошло — проверьте, что коллега подключён: страница
+<a href="../admin/devices.html">Устройства</a>.</li>
+<li>Команда со слэшем не сработала — она пишется первым словом строки.</li>
+<li>Человек не находится по имени — он ещё не заведён: страница
+<a href="../admin/staff.html">Сотрудники и роли</a>.</li>
+</ul>
+<p><a href="../reference/commands.html#%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D0%BA%D0%B0-messenger">Все команды модуля</a></p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d1%81%d0%b0%d0%bc%d1%8b%d0%b5-%d1%87%d0%b0%d1%81%d1%82%d1%8b%d0%b5-%d1%84%d1%80%d0%b0%d0%b7%d1%8b">Самые частые фразы</a></li><li><a href="#%d1%80%d0%b0%d0%b7%d0%b3%d0%be%d0%b2%d0%be%d1%80-%d0%bd%d0%b0-%d0%bd%d0%b5%d1%81%d0%ba%d0%be%d0%bb%d1%8c%d0%ba%d0%b8%d1%85-%d1%87%d0%b5%d0%bb%d0%be%d0%b2%d0%b5%d0%ba">Разговор на нескольких человек</a></li><li><a href="#%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b-%d1%81%d0%be%d1%81%d1%82%d0%b0%d0%b2%d0%b0">Команды состава</a></li><li><a href="#%d1%83%d0%bf%d0%be%d0%bc%d0%b8%d0%bd%d0%b0%d0%bd%d0%b8%d1%8f">Упоминания</a></li><li><a href="#%d1%87%d1%82%d0%be-%d0%b2%d0%b8%d0%b4%d0%b8%d1%82-%d0%b0%d0%b4%d0%bc%d0%b8%d0%bd%d0%b8%d1%81%d1%82%d1%80%d0%b0%d1%82%d0%be%d1%80">Что видит администратор</a></li><li><a href="#%d0%b5%d1%81%d0%bb%d0%b8-%d0%bd%d0%b5-%d0%b2%d1%8b%d1%88%d0%bb%d0%be">Если не вышло</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

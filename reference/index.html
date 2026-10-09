@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Справочник — Джун</title>
+<meta name="description" content="Полные перечни: команды, клавиши, флаги, параметры узла, типы полей и коды ошибок.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <span>Справочник</span></p>
+    <h1>Справочник</h1>
+    <p class="lead">Полные перечни: команды, клавиши, флаги, параметры узла, типы полей и коды ошибок.</p>
+    <ul class="cards">
+      <li><a href="../reference/commands.html">Все команды</a> <span>Каждый модуль, его слова, представления и поля.</span></li>
+      <li><a href="../reference/keys.html">Горячие клавиши</a> <span>Клавиатурная карта строки ввода.</span></li>
+      <li><a href="../reference/flags.html">Флаги запуска</a> <span>Чем отличается запуск из командной строки.</span></li>
+      <li><a href="../reference/env.html">Переменные окружения</a> <span>Что узел читает из окружения при запуске.</span></li>
+      <li><a href="../reference/node.html">Параметры узла</a> <span>Всё, что администратор меняет фразой «настройки узла».</span></li>
+      <li><a href="../reference/june-conf.html">Файл june.conf</a> <span>Настройки, которые нужны Джуну до открытия базы.</span></li>
+      <li><a href="../reference/fields.html">Типы полей</a> <span>Чем объявляется поле формы.</span></li>
+      <li><a href="../reference/errors.html">Коды ошибок</a> <span>Что возвращает модуль, когда действие не выполнено.</span></li>
+      
+    </ul>
+    <div class="text"><blockquote>
+<p>Страница собрана из кода. Не правьте её руками: правка пропадёт при следующей сборке. Меняется она там, откуда собрана, — в манифесте модуля, в реестре параметров или в объявлении флага.</p>
+</blockquote>
+<p>Справочник отвечает на вопрос «как это называется и что бывает», а
+руководство — на вопрос «как это сделать». Руководство ссылается сюда и
+не повторяет перечни.</p>
+<ul>
+<li><a href="commands.html">Все команды</a> — каждый модуль: чем открывается, какие
+представления и поля у него есть.</li>
+<li><a href="keys.html">Горячие клавиши</a> — клавиатурная карта строки ввода.</li>
+<li><a href="flags.html">Флаги запуска</a> — чем отличается запуск из командной строки.</li>
+<li><a href="env.html">Переменные окружения</a> — что читается из окружения узла.</li>
+<li><a href="node.html">Параметры узла</a> — всё, что меняется фразой «настройки узла».</li>
+<li><a href="june-conf.html">Файл june.conf</a> — настройки, которые нужны до запуска.</li>
+<li><a href="fields.html">Типы полей</a> — для автора модуля.</li>
+<li><a href="errors.html">Коды ошибок</a> — для автора модуля.</li>
+</ul>
+</div>
+  </main>
+
+  
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

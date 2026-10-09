@@ -1,0 +1,190 @@
+/* Оформление сайта документации.
+   Палитра, шрифты и метрики — те же, что у продукта: tokens.css
+   копируется рядом и подключается первым. Здесь только раскладка
+   страницы, которой у продукта нет.
+
+   Чего здесь нет: баннеров, «популярных статей», футера на три колонки.
+   Боковое оглавление и поиск у сайта есть — это справочник, по которому
+   ходят, а не рабочий инструмент. Запреты раздела 9 контракта касаются
+   продукта. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.skip {
+  position: absolute; left: -999px;
+  background: var(--c-surface); color: var(--c-text);
+  padding: var(--space-3) var(--space-4); border: 1px solid var(--c-border-strong);
+}
+.skip:focus { left: var(--space-4); top: var(--space-4); z-index: 10; }
+
+/* ── Шапка ───────────────────────────────────────────────────────── */
+
+.top {
+  display: flex; align-items: center; gap: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+  position: sticky; top: 0; z-index: 5;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 18px;
+  color: var(--c-text); text-decoration: none;
+}
+
+.find { position: relative; flex: 1; max-width: var(--bar-width); }
+
+.find input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font: inherit;
+  color: var(--c-text);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-md);
+}
+.find input:focus { outline: 2px solid var(--c-accent); outline-offset: 1px; }
+
+#found {
+  position: absolute; left: 0; right: 0; top: calc(100% + var(--space-2));
+  margin: 0; padding: 0; list-style: none; z-index: 6;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border-strong);
+  max-height: 60vh; overflow-y: auto;
+}
+#found li + li { border-top: 1px solid var(--c-border); }
+#found a { display: block; padding: var(--space-3) var(--space-4); color: var(--c-text); text-decoration: none; }
+#found a:hover, #found a:focus, #found .on a { background: var(--c-bg); }
+#found small { display: block; color: var(--c-text-muted); }
+
+/* ── Раскладка ───────────────────────────────────────────────────── */
+
+.page {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 200px;
+  gap: var(--space-7);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5) var(--space-8);
+}
+
+.side ul { list-style: none; margin: 0; padding: 0; }
+.side > ul > li { margin-bottom: var(--space-5); }
+.side .section > a { font-weight: 600; color: var(--c-text); text-decoration: none; }
+.side ul ul { margin-top: var(--space-2); }
+.side ul ul a {
+  display: block; padding: 2px 0;
+  color: var(--c-text-muted); text-decoration: none;
+  font-size: 15px;
+}
+.side ul ul a:hover { color: var(--c-text); }
+.side a[aria-current="page"] { color: var(--c-accent); font-weight: 600; }
+
+main { min-width: 0; }
+.text, .lead { max-width: 70ch; }
+
+.crumbs { margin: 0 0 var(--space-4); color: var(--c-text-muted); font-size: 14px; }
+.crumbs a { color: var(--c-text-muted); }
+
+h1 { font-family: var(--font-display); font-size: 30px; line-height: 1.2; margin: 0 0 var(--space-4); }
+h2 { font-family: var(--font-display); font-size: 22px; margin: var(--space-7) 0 var(--space-3); }
+h3 { font-size: 18px; margin: var(--space-6) 0 var(--space-3); }
+
+.level {
+  display: inline-block; white-space: nowrap;
+  font-family: var(--font-meta); font-size: 13px; font-weight: 500;
+  color: var(--c-accent-fg); background: var(--c-signal);
+  padding: 2px var(--space-3); vertical-align: middle;
+}
+
+.lead { color: var(--c-text-muted); font-size: 17px; margin: 0 0 var(--space-6); }
+
+.cards { list-style: none; margin: 0 0 var(--space-6); padding: 0; max-width: 70ch; }
+.cards li { border-top: 1px solid var(--c-border); padding: var(--space-3) 0; }
+.cards a { font-weight: 600; }
+.cards span { display: block; color: var(--c-text-muted); font-size: 15px; }
+
+a { color: var(--c-accent); }
+
+/* ── Текст страницы ──────────────────────────────────────────────── */
+
+.text table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.text .wide { overflow-x: auto; }
+.text th, .text td {
+  border: 1px solid var(--c-border);
+  padding: var(--space-2) var(--space-3);
+  text-align: left; vertical-align: top;
+}
+.text th { background: var(--c-surface); font-weight: 600; }
+
+.text code {
+  font-family: var(--font-mono); font-size: 0.92em;
+  background: var(--c-surface); border: 1px solid var(--c-border);
+  padding: 0 3px;
+}
+
+.text pre {
+  position: relative;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border-strong);
+  padding: var(--space-4);
+  overflow-x: auto;
+}
+.text pre code { background: none; border: none; padding: 0; }
+
+.copy {
+  position: absolute; top: var(--space-2); right: var(--space-2);
+  font: inherit; font-size: 13px;
+  color: var(--c-text); background: var(--c-bg);
+  border: 1px solid var(--c-border-strong); cursor: pointer;
+  padding: 2px var(--space-3);
+}
+
+.text blockquote {
+  margin: var(--space-5) 0; padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--c-signal);
+  color: var(--c-text-muted); background: var(--c-surface);
+}
+
+.phrase { display: inline-block; }
+.phrase-arrow { color: var(--c-text-muted); }
+
+.anchor { color: var(--c-ghost); text-decoration: none; margin-left: var(--space-2); opacity: 0; }
+h2:hover .anchor, h3:hover .anchor, .anchor:focus { opacity: 1; }
+
+/* ── Оглавление страницы ─────────────────────────────────────────── */
+
+.toc { font-size: 14px; position: sticky; top: 72px; align-self: start; }
+.toc p { color: var(--c-text-muted); margin: 0 0 var(--space-2); }
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc a { display: block; padding: 2px 0; color: var(--c-text-muted); text-decoration: none; }
+.toc a:hover { color: var(--c-text); }
+
+.bottom {
+  border-top: 1px solid var(--c-border);
+  background: var(--c-surface);
+  padding: var(--space-5);
+  color: var(--c-text-muted); font-size: 14px;
+}
+.bottom p { max-width: 70ch; margin: 0 auto; }
+
+/* ── Телефон ─────────────────────────────────────────────────────
+   У продукта мобильной вёрстки нет, у сайта есть: инструкцию по
+   установке читают с телефона, стоя у машины, куда ставят. */
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .toc { display: none; }
+  .side { border-bottom: 1px solid var(--c-border); padding-bottom: var(--space-4); }
+  .side > ul > li:not(.open) > ul { display: none; }
+}

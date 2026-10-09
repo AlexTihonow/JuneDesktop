@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Первый запуск — Джун</title>
+<meta name="description" content="Кто становится администратором и какие пять фраз стоит попробовать первыми.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section open">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html" aria-current="page">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../start/index.html">Начало</a> / <span>Первый запуск</span></p>
+    <h1>Первый запуск</h1>
+    <p class="lead">Кто становится администратором и какие пять фраз стоит попробовать первыми.</p>
+    
+    <div class="text"><p>Джун запускается и сам открывает вкладку браузера по адресу
+<code>localhost:7777</code>. Пароля и учётной записи нет: узел стоит в вашей сети,
+и тот, кто открыл его первым, становится администратором.</p>
+<h2 id="кто-вы-для-джуна">Кто вы для Джуна</h2>
+<p>Первый запуск создаёт администратора под именем пользователя системы.
+Поменять имя можно сразу:</p>
+<p><span class="phrase"><code>смени имя</code> <span class="phrase-arrow">→</span> откроется профиль с одним полем — именем</span></p>
+<p>Остальные сотрудники появляются двумя способами: администратор заводит
+их сам или коллега подключается со своего устройства по одноразовому
+коду. Оба пути — на странице <a href="../admin/staff.html">Сотрудники и роли</a>.</p>
+<h2 id="пять-фраз-с-которых-стоит-начать">Пять фраз, с которых стоит начать</h2>
+<p><span class="phrase"><code>обучение</code> <span class="phrase-arrow">→</span> откроется курс, который ведёт по продукту шагами</span></p>
+<p><span class="phrase"><code>напиши Саше</code> <span class="phrase-arrow">→</span> откроется переписка с Сашей</span></p>
+<p><span class="phrase"><code>что сегодня</code> <span class="phrase-arrow">→</span> откроется ближайшее в календаре</span></p>
+<p><span class="phrase"><code>файлы</code> <span class="phrase-arrow">→</span> откроется список принятых файлов</span></p>
+<p><span class="phrase"><code>/помощь</code> <span class="phrase-arrow">→</span> покажет, что Джун умеет прямо сейчас</span></p>
+<h2 id="если-джун-не-понял-фразу">Если Джун не понял фразу</h2>
+<p>Он скажет об этом и предложит несколько кандидатов чипами под строкой —
+выбрать можно цифрой. Выбранное Джун запоминает: в следующий раз та же
+фраза откроет то же самое. Слова, которые он выучил, видны в разделе
+<a href="../use/personalization.html">Внешний вид</a>.</p>
+<h2 id="где-лежат-данные">Где лежат данные</h2>
+<p>Рядом с программой появляется папка <code>data</code>: в ней база <code>june.db</code>, файлы
+и шаблоны документов. Копия этой папки — это резервная копия узла,
+подробнее на странице <a href="../admin/backup.html">Резервная копия и перенос</a>.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d0%ba%d1%82%d0%be-%d0%b2%d1%8b-%d0%b4%d0%bb%d1%8f-%d0%b4%d0%b6%d1%83%d0%bd%d0%b0">Кто вы для Джуна</a></li><li><a href="#%d0%bf%d1%8f%d1%82%d1%8c-%d1%84%d1%80%d0%b0%d0%b7-%d1%81-%d0%ba%d0%be%d1%82%d0%be%d1%80%d1%8b%d1%85-%d1%81%d1%82%d0%be%d0%b8%d1%82-%d0%bd%d0%b0%d1%87%d0%b0%d1%82%d1%8c">Пять фраз, с которых стоит начать</a></li><li><a href="#%d0%b5%d1%81%d0%bb%d0%b8-%d0%b4%d0%b6%d1%83%d0%bd-%d0%bd%d0%b5-%d0%bf%d0%be%d0%bd%d1%8f%d0%bb-%d1%84%d1%80%d0%b0%d0%b7%d1%83">Если Джун не понял фразу</a></li><li><a href="#%d0%b3%d0%b4%d0%b5-%d0%bb%d0%b5%d0%b6%d0%b0%d1%82-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5">Где лежат данные</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

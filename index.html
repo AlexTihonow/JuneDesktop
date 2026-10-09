@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Джун</title>
+<meta name="description" content="Локальный мультитул офисных сервисов с единственной точкой входа — строкой ввода.">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-base="">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="start/index.html">Начало</a>
+        <ul>
+          <li><a href="start/what.html">Что такое Джун</a></li>
+          <li><a href="start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="start/first-run.html">Первый запуск</a></li>
+          <li><a href="start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="use/index.html">Работа</a>
+        <ul>
+          <li><a href="use/bar.html">Строка ввода</a></li>
+          <li><a href="use/messenger.html">Переписка</a></li>
+          <li><a href="use/notifications.html">Уведомления</a></li>
+          <li><a href="use/documents.html">Документы</a></li>
+          <li><a href="use/intake.html">Файлы</a></li>
+          <li><a href="use/search.html">Поиск</a></li>
+          <li><a href="use/tags.html">Метки</a></li>
+          <li><a href="use/calendar.html">Календарь</a></li>
+          <li><a href="use/polls.html">Голосование</a></li>
+          <li><a href="use/disk.html">Диск</a></li>
+          <li><a href="use/personalization.html">Внешний вид</a></li>
+          <li><a href="use/tutorial.html">Обучение</a></li>
+          <li><a href="use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="admin/devices.html">Устройства</a></li>
+          <li><a href="admin/node.html">Настройки узла</a></li>
+          <li><a href="admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="admin/centers.html">Центры вычислений</a></li>
+          <li><a href="admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="admin/update.html">Обновление</a></li>
+          <li><a href="admin/purge.html">Чистка</a></li>
+          <li><a href="admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="reference/commands.html">Все команды</a></li>
+          <li><a href="reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="reference/flags.html">Флаги запуска</a></li>
+          <li><a href="reference/env.html">Переменные окружения</a></li>
+          <li><a href="reference/node.html">Параметры узла</a></li>
+          <li><a href="reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="reference/fields.html">Типы полей</a></li>
+          <li><a href="reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="module/what.html">Что такое модуль</a></li>
+          <li><a href="module/create.html">Создать</a></li>
+          <li><a href="module/manifest.html">Манифест</a></li>
+          <li><a href="module/views.html">Представления</a></li>
+          <li><a href="module/fields.html">Поля и права</a></li>
+          <li><a href="module/phrases.html">Фразы</a></li>
+          <li><a href="module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    
+    <h1>Джун</h1>
+    <p class="lead">Локальный мультитул офисных сервисов с единственной точкой входа — строкой ввода.</p>
+    
+    <div class="text"><p>Джун работает на одной машине в вашей сети. Вы пишете в строку ввода,
+что хотите сделать, — интерфейс собирается под это и после выполнения
+исчезает. Меню, вкладок и разделов настроек нет: всё достижимо текстом.</p>
+<p><span class="phrase"><code>напиши Саше</code> <span class="phrase-arrow">→</span> откроется переписка с Сашей</span></p>
+<p><span class="phrase"><code>что сегодня</code> <span class="phrase-arrow">→</span> откроется ближайшее в календаре</span></p>
+<p><span class="phrase"><code>найди постановление 412</code> <span class="phrase-arrow">→</span> откроется поиск по файлам</span></p>
+<h2 id="с-чего-начать">С чего начать</h2>
+<ul>
+<li><strong>Я пользуюсь Джуном.</strong> <a href="use/bar.html">Строка ввода</a> — как разговаривать
+с продуктом, и <a href="start/what.html">Что такое Джун</a> — как он устроен для
+человека.</li>
+<li><strong>Я ставлю Джун на машину.</strong> <a href="start/install-macos.html">Установка на macOS</a>,
+<a href="start/install-windows.html">на Windows</a>, <a href="start/install-linux.html">на Linux</a>.</li>
+<li><strong>Я пишу свой модуль.</strong> <a href="module/index.html">Свой модуль</a> — от пустой
+папки до первой фразы.</li>
+</ul>
+<h2 id="что-нужно-для-работы">Что нужно для работы</h2>
+<p>Одна машина, на которой Джун запущен, и браузер у каждого, кто им
+пользуется. Ни интернета, ни учётной записи в чужом сервисе, ни
+установки чего-либо на машины коллег не требуется.</p>
+<p>Без сети и без языковой модели Джун работает: фразы разбираются на самой
+машине. Модель — <a href="admin/model.html">Claude или Ollama</a> — повышает точность
+разбора, но ничего не выключает, когда её нет.</p>
+<h2 id="где-что-лежит">Где что лежит</h2>
+<table>
+<thead>
+<tr>
+<th>Раздел</th>
+<th>О чём</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="start/index.html">Начало</a></td>
+<td>установка, первый запуск, раздача коллегам</td>
+</tr>
+<tr>
+<td><a href="use/index.html">Работа</a></td>
+<td>переписка, файлы, документы, календарь, поиск и остальное</td>
+</tr>
+<tr>
+<td><a href="admin/index.html">Администрирование</a></td>
+<td>сотрудники, устройства, настройки узла, копии</td>
+</tr>
+<tr>
+<td><a href="reference/index.html">Справочник</a></td>
+<td>полные перечни команд, клавиш, флагов и параметров</td>
+</tr>
+<tr>
+<td><a href="module/index.html">Свой модуль</a></td>
+<td>как дописать к Джуну свой раздел</td>
+</tr>
+<tr>
+<td><a href="help/index.html">Решение проблем</a></td>
+<td>по симптомам: «у коллеги не открывается» и другие</td>
+</tr>
+<tr>
+<td><a href="glossary/index.html">Словарь</a></td>
+<td>узел, кадр, проекция, центр вычислений</td>
+</tr>
+</tbody>
+</table>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d1%81-%d1%87%d0%b5%d0%b3%d0%be-%d0%bd%d0%b0%d1%87%d0%b0%d1%82%d1%8c">С чего начать</a></li><li><a href="#%d1%87%d1%82%d0%be-%d0%bd%d1%83%d0%b6%d0%bd%d0%be-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b">Что нужно для работы</a></li><li><a href="#%d0%b3%d0%b4%d0%b5-%d1%87%d1%82%d0%be-%d0%bb%d0%b5%d0%b6%d0%b8%d1%82">Где что лежит</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="assets/search.js" defer></script>
+</body>
+</html>

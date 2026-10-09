@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Строка ввода — Джун</title>
+<meta name="description" content="Единственная точка входа: всё, что Джун умеет, достижимо отсюда текстом.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html" aria-current="page">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../use/index.html">Работа</a> / <span>Строка ввода</span></p>
+    <h1>Строка ввода</h1>
+    <p class="lead">Единственная точка входа: всё, что Джун умеет, достижимо отсюда текстом.</p>
+    
+    <div class="text"><p>Строка ввода — это и поиск, и меню, и командная строка сразу. Вы пишете,
+что хотите сделать, Джун открывает под это кадр — форму, список или
+переписку. Сделали дело — кадр уходит, и остаётся та же строка.</p>
+<h2 id="призрачное-дописывание">Призрачное дописывание</h2>
+<p>Пока вы набираете, Джун серым дописывает продолжение — самое вероятное
+по тому, что вы делали раньше. Нажмите Tab, чтобы принять дописанное,
+или продолжайте набирать и не обращайте на него внимания.</p>
+<h2 id="чипы-кандидаты">Чипы-кандидаты</h2>
+<p>Под строкой появляются несколько кандидатов — то, что Джун считает
+уместным прямо сейчас. Выбрать можно мышью или цифрой: первый кандидат
+— <code>1</code>, второй — <code>2</code>. Выбранное Джун запоминает и в следующий раз
+поставит его выше.</p>
+<h2 id="команды-оболочки">Команды оболочки</h2>
+<p>Четыре команды начинаются с косой черты и работают везде:</p>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/выход</code></td>
+<td>снимает верхний кадр и возвращает к предыдущему</td>
+</tr>
+<tr>
+<td><code>/домой</code></td>
+<td>снимает все кадры сразу</td>
+</tr>
+<tr>
+<td><code>/помощь</code></td>
+<td>показывает, что доступно прямо сейчас</td>
+</tr>
+<tr>
+<td><code>/отмена</code></td>
+<td>отменяет незавершённое действие</td>
+</tr>
+</tbody>
+</table>
+<p>Косая черта перед именем модуля открывает модуль: <code>/переписка</code> — то же
+самое, что слово «переписка».</p>
+<h2 id="стопка-кадров">Стопка кадров</h2>
+<p>Открытое складывается стопкой: из переписки можно уйти в файлы, из
+файлов — в поиск, и <code>/выход</code> вернёт по тому же пути назад. Где вы
+находитесь, видно строкой над текстом. Глубина стопки ограничена
+десятью кадрами: Джун не даёт закопаться.</p>
+<h2 id="клавиши">Клавиши</h2>
+<table>
+<thead>
+<tr>
+<th>Нажатие</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Mod+k</code></td>
+<td>поставить курсор в строку из любого места</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>принять дописанное</td>
+</tr>
+<tr>
+<td><code>Enter</code></td>
+<td>выполнить</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>снять кадр или закрыть меню</td>
+</tr>
+<tr>
+<td><code>↑</code> и <code>↓</code></td>
+<td>история введённого</td>
+</tr>
+<tr>
+<td><code>1</code>…<code>9</code></td>
+<td>выбрать кандидата под строкой</td>
+</tr>
+</tbody>
+</table>
+<p><code>Mod</code> — это Cmd на Mac и Ctrl на остальных системах. Полная карта — в
+<a href="../reference/keys.html">справочнике</a>.</p>
+<h2 id="раскладка-и-опечатки">Раскладка и опечатки</h2>
+<p>Набрали фразу не в той раскладке — Джун поймёт её и так: <code>ytn</code> он
+прочитает как «нет». Отдельного переключателя для этого нет.</p>
+<h2 id="когда-джун-не-понял">Когда Джун не понял</h2>
+<p>Он говорит об этом прямо и показывает кандидатов. Выбор чипом — это не
+только действие, но и обучение: Джун запомнит, что вы имели в виду. Что
+он выучил, видно на странице <a href="personalization.html">Внешний вид</a>.</p>
+<p>Если кандидатов нет вовсе, помогает <code>/помощь</code>: она показывает, что
+доступно, списком.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d0%bf%d1%80%d0%b8%d0%b7%d1%80%d0%b0%d1%87%d0%bd%d0%be%d0%b5-%d0%b4%d0%be%d0%bf%d0%b8%d1%81%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5">Призрачное дописывание</a></li><li><a href="#%d1%87%d0%b8%d0%bf%d1%8b-%d0%ba%d0%b0%d0%bd%d0%b4%d0%b8%d0%b4%d0%b0%d1%82%d1%8b">Чипы-кандидаты</a></li><li><a href="#%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b-%d0%be%d0%b1%d0%be%d0%bb%d0%be%d1%87%d0%ba%d0%b8">Команды оболочки</a></li><li><a href="#%d1%81%d1%82%d0%be%d0%bf%d0%ba%d0%b0-%d0%ba%d0%b0%d0%b4%d1%80%d0%be%d0%b2">Стопка кадров</a></li><li><a href="#%d0%ba%d0%bb%d0%b0%d0%b2%d0%b8%d1%88%d0%b8">Клавиши</a></li><li><a href="#%d1%80%d0%b0%d1%81%d0%ba%d0%bb%d0%b0%d0%b4%d0%ba%d0%b0-%d0%b8-%d0%be%d0%bf%d0%b5%d1%87%d0%b0%d1%82%d0%ba%d0%b8">Раскладка и опечатки</a></li><li><a href="#%d0%ba%d0%be%d0%b3%d0%b4%d0%b0-%d0%b4%d0%b6%d1%83%d0%bd-%d0%bd%d0%b5-%d0%bf%d0%be%d0%bd%d1%8f%d0%bb">Когда Джун не понял</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Флаги запуска — Джун</title>
+<meta name="description" content="Чем отличается запуск из командной строки.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html" aria-current="page">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../reference/index.html">Справочник</a> / <span>Флаги запуска</span></p>
+    <h1>Флаги запуска <span class="level">администратор</span></h1>
+    <p class="lead">Чем отличается запуск из командной строки.</p>
+    
+    <div class="text"><blockquote>
+<p>Страница собрана из кода. Не правьте её руками: правка пропадёт при следующей сборке. Меняется она там, откуда собрана, — в манифесте модуля, в реестре параметров или в объявлении флага.</p>
+</blockquote>
+<p>Флаг сильнее всего остального: он перебивает и <code>june.conf</code>, и
+значение, заданное администратором. Так и задумано — флагами пользуются
+на своей машине, когда нужно запустить узел иначе, ничего не меняя
+насовсем.</p>
+<p>Запуск двойным нажатием флагов не передаёт: то, что должно действовать
+всегда, задаётся в <a href="june-conf.html">june.conf</a> или в самом Джуне.</p>
+<h2 id="june"><code>june</code></h2>
+<table>
+<thead>
+<tr>
+<th>Флаг</th>
+<th>По умолчанию</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--config</code></td>
+<td>—</td>
+<td>файл настроек запуска (по умолчанию june.conf рядом с программой)</td>
+</tr>
+<tr>
+<td><code>--data</code></td>
+<td><code>data</code></td>
+<td>папка с базой, шаблонами и файлами (относительная — от рабочего каталога)</td>
+</tr>
+<tr>
+<td><code>--dev</code></td>
+<td><code>false</code></td>
+<td>режим разработки: подробный журнал, вкладка браузера сама не открывается</td>
+</tr>
+<tr>
+<td><code>--lan</code></td>
+<td><code>false</code></td>
+<td>слушать всю локальную сеть, а не только эту машину</td>
+</tr>
+<tr>
+<td><code>--mdns</code></td>
+<td><code>true</code></td>
+<td>объявлять себя в сети по имени (только вместе с --lan)</td>
+</tr>
+<tr>
+<td><code>--port</code></td>
+<td><code>7777</code></td>
+<td>порт HTTP-сервера</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td><code>false</code></td>
+<td>напечатать версию и выйти</td>
+</tr>
+</tbody>
+</table>
+<h2 id="june-center"><code>june-center</code></h2>
+<table>
+<thead>
+<tr>
+<th>Флаг</th>
+<th>По умолчанию</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--code</code></td>
+<td>—</td>
+<td>одноразовый код, выданный на экране «Центры»</td>
+</tr>
+<tr>
+<td><code>--kinds</code></td>
+<td><code>ocr,pdf,embed</code></td>
+<td>какие задания брать, через запятую</td>
+</tr>
+<tr>
+<td><code>--node</code></td>
+<td>—</td>
+<td>адрес узла, например http://192.168.1.10:7777</td>
+</tr>
+<tr>
+<td><code>--ollama</code></td>
+<td><code>http://127.0.0.1:11434</code></td>
+<td>своя Ollama</td>
+</tr>
+<tr>
+<td><code>--once</code></td>
+<td><code>false</code></td>
+<td>взять одно задание и выйти: для проверки связи</td>
+</tr>
+<tr>
+<td><code>--state</code></td>
+<td><code>зависит от машины</code></td>
+<td>где хранить токен</td>
+</tr>
+<tr>
+<td><code>--title</code></td>
+<td><code>зависит от машины</code></td>
+<td>как назвать эту машину на экране узла</td>
+</tr>
+</tbody>
+</table>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#june">june</a></li><li><a href="#june-center">june-center</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Создать — Джун</title>
+<meta name="description" content="Одна команда заводит папку модуля; ни один чужой файл не правится руками.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html" aria-current="page">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../module/index.html">Свой модуль</a> / <span>Создать</span></p>
+    <h1>Создать <span class="level">автор модуля</span></h1>
+    <p class="lead">Одна команда заводит папку модуля; ни один чужой файл не правится руками.</p>
+    
+    <div class="text"><pre><code class="language-bash">go run ./tools/newmodule tasks Задачи
+</code></pre>
+<p>Первое слово — имя модуля латиницей, второе — название для человека.</p>
+<h2 id="что-появилось">Что появилось</h2>
+<pre><code class="language-text">internal/modules/tasks/module.go
+internal/modules/tasks/service.go
+internal/modules/tasks/module_test.go
+internal/modules/tasks/templates/list.gohtml
+internal/modules/tasks/migrations/001_init.sql
+internal/modules/tasks/styles.css
+tests/router/tasks.golden.jsonl
+</code></pre>
+<p>Заготовка уже работает: фраза «задачи» открывает пустой список.</p>
+<h2 id="подключение">Подключение</h2>
+<pre><code class="language-bash">go generate ./...
+</code></pre>
+<p>Генератор пересобирает <code>internal/modules/all.go</code> — единственный чужой
+файл, который меняется, и меняется он механически. Руками его не
+правят: при расхождении его перегенерируют.</p>
+<h2 id="проверка">Проверка</h2>
+<pre><code class="language-bash">go run . --dev
+</code></pre>
+<p>Наберите в строке ввода «задачи» — откроется список вашего модуля.</p>
+<h2 id="что-дальше">Что дальше</h2>
+<p><code>module.go</code> — это <a href="manifest.html">манифест</a>: имя модуля, слова, которыми
+его зовут, и перечень представлений. <code>service.go</code> — функции <code>Load</code> и
+<code>Submit</code> из страницы <a href="views.html">Представления</a>. Поля формы объявляются
+в манифесте: страница <a href="fields.html">Поля и права</a>.</p>
+<h2 id="как-назвать-модуль">Как назвать модуль</h2>
+<p>Имя латиницей — это адрес модуля, имя файла с фразами и приставка его
+таблиц. Менять его потом дороже, чем выбрать сразу: поменяется и имя
+папки, и имя файла эталонных фраз.</p>
+<p>Слово для человека — то, что увидит пользователь в заголовке кадра и в
+справке. Оно может состоять из нескольких слов: «Заявки на закупку».</p>
+<h2 id="если-имя-занято">Если имя занято</h2>
+<p>Узел не запустится и скажет, какое слово с каким модулем столкнулось.
+Посмотреть занятые слова можно в справочнике:
+<a href="../reference/commands.html">Все команды</a>.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d1%87%d1%82%d0%be-%d0%bf%d0%be%d1%8f%d0%b2%d0%b8%d0%bb%d0%be%d1%81%d1%8c">Что появилось</a></li><li><a href="#%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5">Подключение</a></li><li><a href="#%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b0">Проверка</a></li><li><a href="#%d1%87%d1%82%d0%be-%d0%b4%d0%b0%d0%bb%d1%8c%d1%88%d0%b5">Что дальше</a></li><li><a href="#%d0%ba%d0%b0%d0%ba-%d0%bd%d0%b0%d0%b7%d0%b2%d0%b0%d1%82%d1%8c-%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d1%8c">Как назвать модуль</a></li><li><a href="#%d0%b5%d1%81%d0%bb%d0%b8-%d0%b8%d0%bc%d1%8f-%d0%b7%d0%b0%d0%bd%d1%8f%d1%82%d0%be">Если имя занято</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

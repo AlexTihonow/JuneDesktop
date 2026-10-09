@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Диск — Джун</title>
+<meta name="description" content="Общая папка на машине узла: папки отделов, личные папки, отправка коллеге.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html" aria-current="page">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../use/index.html">Работа</a> / <span>Диск</span></p>
+    <h1>Диск</h1>
+    <p class="lead">Общая папка на машине узла: папки отделов, личные папки, отправка коллеге.</p>
+    
+    <div class="text"><p>Диск — это одна общая папка на машине, где запущен Джун, нарисованная
+плитками. Администратор задаёт, где она лежит; выше неё подняться
+нельзя.</p>
+<h2 id="самые-частые-фразы">Самые частые фразы</h2>
+<p><span class="phrase"><code>диск</code> <span class="phrase-arrow">→</span> откроется общая папка</span></p>
+<p><span class="phrase"><code>открой папку отчёты</code> <span class="phrase-arrow">→</span> откроется эта папка</span></p>
+<p><span class="phrase"><code>создай папку сметы</code> <span class="phrase-arrow">→</span> заведёт папку</span></p>
+<p><span class="phrase"><code>отправь файл договор.pdf Саше</code> <span class="phrase-arrow">→</span> отправит файл в переписку с Сашей</span></p>
+<h2 id="кто-что-видит">Кто что видит</h2>
+<p>Администратор видит общую папку целиком. Работник видит папку своего
+отдела и свою личную папку, а писать может туда, где он хозяин.
+Отделы назначает администратор.</p>
+<h2 id="удаление">Удаление</h2>
+<p>Удалённое уходит в скрытую корзину общей папки и лежит там тридцать
+дней. С диска машины оно не исчезает сразу — это защита от
+случайного нажатия, а не от злого умысла.</p>
+<h2 id="порядок-и-выборка">Порядок и выборка</h2>
+<p>Плитки можно упорядочить и отобрать по карточке — это меняет экран, а
+не перекладывает файлы. Перекладывает только «разложи», и только после
+подтверждения.</p>
+<h2 id="файлы-мимо-джуна">Файлы мимо Джуна</h2>
+<p>Папку на машине можно наполнять и обычным способом, минуя Джуна: диск
+сверяется с ней раз в десять минут и подхватывает новое.</p>
+<h2 id="если-не-вышло">Если не вышло</h2>
+<ul>
+<li>Папка не открывается — она вне общей папки узла или не ваша по
+правам.</li>
+<li>Файла нет на месте — посмотрите в корзине общей папки.</li>
+<li>Отправка не нашла человека — он ещё не заведён.</li>
+</ul>
+<p><a href="../reference/commands.html#%D0%B4%D0%B8%D1%81%D0%BA-disk">Все команды модуля</a></p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d1%81%d0%b0%d0%bc%d1%8b%d0%b5-%d1%87%d0%b0%d1%81%d1%82%d1%8b%d0%b5-%d1%84%d1%80%d0%b0%d0%b7%d1%8b">Самые частые фразы</a></li><li><a href="#%d0%ba%d1%82%d0%be-%d1%87%d1%82%d0%be-%d0%b2%d0%b8%d0%b4%d0%b8%d1%82">Кто что видит</a></li><li><a href="#%d1%83%d0%b4%d0%b0%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5">Удаление</a></li><li><a href="#%d0%bf%d0%be%d1%80%d1%8f%d0%b4%d0%be%d0%ba-%d0%b8-%d0%b2%d1%8b%d0%b1%d0%be%d1%80%d0%ba%d0%b0">Порядок и выборка</a></li><li><a href="#%d1%84%d0%b0%d0%b9%d0%bb%d1%8b-%d0%bc%d0%b8%d0%bc%d0%be-%d0%b4%d0%b6%d1%83%d0%bd%d0%b0">Файлы мимо Джуна</a></li><li><a href="#%d0%b5%d1%81%d0%bb%d0%b8-%d0%bd%d0%b5-%d0%b2%d1%8b%d1%88%d0%bb%d0%be">Если не вышло</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

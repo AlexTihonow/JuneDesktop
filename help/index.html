@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Решение проблем — Джун</title>
+<meta name="description" content="По симптомам, как их формулирует человек, а не по устройству модулей.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <span>Решение проблем</span></p>
+    <h1>Решение проблем</h1>
+    <p class="lead">По симптомам, как их формулирует человек, а не по устройству модулей.</p>
+    
+    <div class="text"><h2 id="у-коллеги-не-открывается-джун">У коллеги не открывается Джун</h2>
+<p>Проверьте по порядку:</p>
+<ol>
+<li>Раздача включена и узел перезапущен: страница
+<a href="../start/share.html">Раздать коллегам</a>.</li>
+<li>Коллеге назван адрес цифрами, а не <code>june.local</code>.</li>
+<li>Брандмауэр разрешил подключения: страницы установки
+<a href="../start/install-macos.html">macOS</a>, <a href="../start/install-windows.html">Windows</a>,
+<a href="../start/install-linux.html">Linux</a>.</li>
+<li>Обе машины в одной сети. Гостевая сеть Wi-Fi разделяет устройства
+между собой — в ней коллега узел не увидит.</li>
+</ol>
+<h2 id="не-работает-адрес-june-local">Не работает адрес <code>june.local</code></h2>
+<p>Имя объявляется по сети мультикастом, а он закрыт не в каждой сети.
+Кроме того, имя может быть занято другой службой объявления имён.
+Адрес цифрами работает всегда, и экран «Сервер» показывает именно его:
+<code>сервер</code>.</p>
+<h2 id="macos-пишет-что-файл-повреждён">macOS пишет, что файл повреждён</h2>
+<p>Файл не подписан сертификатом Apple. Нажмите на него правой кнопкой,
+выберите «Открыть», затем «Открыть» ещё раз. Подробнее — на странице
+<a href="../start/install-macos.html">Установка: macOS</a>.</p>
+<h2 id="windows-не-даёт-запустить-программу">Windows не даёт запустить программу</h2>
+<p>Нажмите «Подробнее», затем «Выполнить в любом случае». Причина та же:
+нет подписи. Страница <a href="../start/install-windows.html">Установка: Windows</a>.</p>
+<h2 id="порт-занят">Порт занят</h2>
+<p>Джун не запустится, если порт занят другой программой или вторым
+экземпляром Джуна. Смените порт в <code>june.conf</code> рядом с программой или
+остановите то, что занимает порт.</p>
+<h2 id="после-обновления-пропали-данные">После обновления пропали данные</h2>
+<p>Скорее всего, программа запущена из другой папки: данные лежат рядом с
+ней. Найдите файл <code>june.db</code> и перенесите папку <code>data</code> к программе.
+Страница <a href="../admin/update.html">Обновление</a>.</p>
+<h2 id="документ-собрался-а-таблица-пустая">Документ собрался, а таблица пустая</h2>
+<p>Проверьте заголовок шаблона: поля формы объявляет он. Страница
+<a href="../use/documents.html">Документы</a>.</p>
+<h2 id="скан-не-находится-поиском">Скан не находится поиском</h2>
+<p>На машине узла нет программы распознавания либо она без русского языка.
+Страница <a href="../admin/ocr.html">Распознавание сканов</a>. После установки
+разберите файл заново: <code>разбери заново</code>.</p>
+<h2 id="джун-не-понимает-фразу">Джун не понимает фразу</h2>
+<p>Он показывает кандидатов чипами — выберите нужного, и в следующий раз
+он поймёт. Посмотрите, какими словами модуль зовут на самом деле:
+<a href="../reference/commands.html">Все команды</a>. Подключённая
+<a href="../admin/model.html">модель</a> разбирает сложные фразы точнее.</p>
+<h2 id="код-подключения-не-принимается">Код подключения не принимается</h2>
+<p>Код живёт пять минут. Десять неверных попыток гасят все выданные коды.
+Выдайте новый: <code>выдай код подключения</code>.</p>
+<h2 id="модель-подключена-а-написано-простой-режим">Модель подключена, а написано «простой режим»</h2>
+<p>Ключ не задан, Ollama не отвечает или значение задано переменной
+окружения, которая сильнее админки. Страница
+<a href="../admin/model.html">Модель: Claude и Ollama</a>.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d1%83-%d0%ba%d0%be%d0%bb%d0%bb%d0%b5%d0%b3%d0%b8-%d0%bd%d0%b5-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d0%b2%d0%b0%d0%b5%d1%82%d1%81%d1%8f-%d0%b4%d0%b6%d1%83%d0%bd">У коллеги не открывается Джун</a></li><li><a href="#%d0%bd%d0%b5-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0%d0%b5%d1%82-%d0%b0%d0%b4%d1%80%d0%b5%d1%81-june-local">Не работает адрес june.local</a></li><li><a href="#macos-%d0%bf%d0%b8%d1%88%d0%b5%d1%82-%d1%87%d1%82%d0%be-%d1%84%d0%b0%d0%b9%d0%bb-%d0%bf%d0%be%d0%b2%d1%80%d0%b5%d0%b6%d0%b4%d1%91%d0%bd">macOS пишет, что файл повреждён</a></li><li><a href="#windows-%d0%bd%d0%b5-%d0%b4%d0%b0%d1%91%d1%82-%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d1%82%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d1%83">Windows не даёт запустить программу</a></li><li><a href="#%d0%bf%d0%be%d1%80%d1%82-%d0%b7%d0%b0%d0%bd%d1%8f%d1%82">Порт занят</a></li><li><a href="#%d0%bf%d0%be%d1%81%d0%bb%d0%b5-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f-%d0%bf%d1%80%d0%be%d0%bf%d0%b0%d0%bb%d0%b8-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5">После обновления пропали данные</a></li><li><a href="#%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82-%d1%81%d0%be%d0%b1%d1%80%d0%b0%d0%bb%d1%81%d1%8f-%d0%b0-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d0%b0-%d0%bf%d1%83%d1%81%d1%82%d0%b0%d1%8f">Документ собрался, а таблица пустая</a></li><li><a href="#%d1%81%d0%ba%d0%b0%d0%bd-%d0%bd%d0%b5-%d0%bd%d0%b0%d1%85%d0%be%d0%b4%d0%b8%d1%82%d1%81%d1%8f-%d0%bf%d0%be%d0%b8%d1%81%d0%ba%d0%be%d0%bc">Скан не находится поиском</a></li><li><a href="#%d0%b4%d0%b6%d1%83%d0%bd-%d0%bd%d0%b5-%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%b5%d1%82-%d1%84%d1%80%d0%b0%d0%b7%d1%83">Джун не понимает фразу</a></li><li><a href="#%d0%ba%d0%be%d0%b4-%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%bd%d0%b5-%d0%bf%d1%80%d0%b8%d0%bd%d0%b8%d0%bc%d0%b0%d0%b5%d1%82%d1%81%d1%8f">Код подключения не принимается</a></li><li><a href="#%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d1%8c-%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b0-%d0%b0-%d0%bd%d0%b0%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%be-%d0%bf%d1%80%d0%be%d1%81%d1%82%d0%be%d0%b9-%d1%80%d0%b5%d0%b6%d0%b8%d0%bc">Модель подключена, а написано «простой режим»</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

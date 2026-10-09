@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Манифест — Джун</title>
+<meta name="description" content="Из манифеста растут интерфейс, разбор фраз, справка и права.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html" aria-current="page">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../module/index.html">Свой модуль</a> / <span>Манифест</span></p>
+    <h1>Манифест <span class="level">автор модуля</span></h1>
+    <p class="lead">Из манифеста растут интерфейс, разбор фраз, справка и права.</p>
+    
+    <div class="text"><p>Манифест — это <code>contract.Module</code>, который возвращает <code>Def()</code>. Всё
+остальное производно от него.</p>
+<pre><code class="language-go">func Def() *contract.Module {
+	return &amp;contract.Module{
+		ID:    &quot;tasks&quot;,
+		Title: &quot;Задачи&quot;,
+		Description: &quot;Задачи с текстом, сроком и исполнителем: завести задачу, &quot; +
+			&quot;посмотреть свои, отметить сделанной.&quot;,
+		Aliases: []string{&quot;задачи&quot;, &quot;задача&quot;, &quot;дела&quot;, &quot;поручения&quot;},
+		Intents: []string{
+			&quot;задачи&quot;,
+			&quot;добавь задачу позвонить Саше&quot;,
+			&quot;мои задачи&quot;,
+		},
+		Permissions: contract.AllRoles(),
+		Files:       files,
+		Home:        &quot;list&quot;,
+		Views:       []contract.View{ /* ... */ },
+	}
+}
+</code></pre>
+<h2 id="поля-манифеста">Поля манифеста</h2>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Что это</th>
+<th>На что влияет</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID</code></td>
+<td>имя латиницей</td>
+<td>адреса, имя таблиц, имя файла с фразами</td>
+</tr>
+<tr>
+<td><code>Title</code></td>
+<td>название для человека</td>
+<td>заголовок кадра, справка, сайт</td>
+</tr>
+<tr>
+<td><code>Description</code></td>
+<td>одна-две фразы <strong>для модели</strong></td>
+<td>разбор фраз, когда модель подключена</td>
+</tr>
+<tr>
+<td><code>Aliases</code></td>
+<td>слова, которыми модуль зовут</td>
+<td>разбор фраз без модели</td>
+</tr>
+<tr>
+<td><code>Intents</code></td>
+<td>примеры фраз</td>
+<td>справка <code>/помощь</code>, подсказки, промпт модели</td>
+</tr>
+<tr>
+<td><code>Patterns</code></td>
+<td>шаблоны фраз с параметрами</td>
+<td>разбор фраз с хвостом</td>
+</tr>
+<tr>
+<td><code>Permissions</code></td>
+<td>кому доступен модуль</td>
+<td>видимость и прямой адрес</td>
+</tr>
+<tr>
+<td><code>Home</code></td>
+<td>представление по умолчанию</td>
+<td>что открыть, когда названо имя модуля</td>
+</tr>
+<tr>
+<td><code>Files</code></td>
+<td>папка модуля через <code>embed</code></td>
+<td>шаблоны, миграции, стили</td>
+</tr>
+</tbody>
+</table>
+<p><code>Description</code> читает модель, а не человек: пишите по делу, без
+рекламных слов. От того, насколько точно он описывает модуль, зависит,
+попадёт ли к вам фраза, которой нет в ваших словах.</p>
+<h2 id="шаблоны-фраз">Шаблоны фраз</h2>
+<p>Шаблон ловит фразу с хвостом и кладёт хвост в параметр:</p>
+<pre><code class="language-go">Patterns: []contract.Pattern{
+	{Re: `^добавь задачу (.+)$`, View: &quot;add&quot;, Capture: []string{&quot;text&quot;}, Confidence: 0.9},
+}
+</code></pre>
+<p>Имя параметра из <code>Capture</code> совпадает с именем поля формы — и поле
+окажется заполненным.</p>
+<h2 id="частые-ошибки">Частые ошибки</h2>
+<ul>
+<li>Слово из <code>Aliases</code> занято другим модулем. Проверка манифеста при
+старте скажет об этом прямо, и узел не запустится.</li>
+<li><code>Home</code> указывает на представление, которого нет.</li>
+<li><code>Description</code> написан для человека: «здесь заводят задачи, очень
+удобно». Модели это не говорит ничего о том, какие фразы сюда вести.</li>
+</ul>
+<h2 id="где-посмотреть-как-это-выглядит-у-других">Где посмотреть, как это выглядит у других</h2>
+<p>Справочник собран из манифестов всех модулей продукта:
+<a href="../reference/commands.html">Все команды</a>. Там видно, какие слова уже
+заняты и как устроены представления соседей.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d0%bf%d0%be%d0%bb%d1%8f-%d0%bc%d0%b0%d0%bd%d0%b8%d1%84%d0%b5%d1%81%d1%82%d0%b0">Поля манифеста</a></li><li><a href="#%d1%88%d0%b0%d0%b1%d0%bb%d0%be%d0%bd%d1%8b-%d1%84%d1%80%d0%b0%d0%b7">Шаблоны фраз</a></li><li><a href="#%d1%87%d0%b0%d1%81%d1%82%d1%8b%d0%b5-%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b8">Частые ошибки</a></li><li><a href="#%d0%b3%d0%b4%d0%b5-%d0%bf%d0%be%d1%81%d0%bc%d0%be%d1%82%d1%80%d0%b5%d1%82%d1%8c-%d0%ba%d0%b0%d0%ba-%d1%8d%d1%82%d0%be-%d0%b2%d1%8b%d0%b3%d0%bb%d1%8f%d0%b4%d0%b8%d1%82-%d1%83-%d0%b4%d1%80%d1%83%d0%b3%d0%b8%d1%85">Где посмотреть, как это выглядит у других</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

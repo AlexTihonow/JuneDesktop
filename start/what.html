@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Что такое Джун — Джун</title>
+<meta name="description" content="Одна строка ввода вместо меню, вкладок и разделов настроек.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section open">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html" aria-current="page">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../start/index.html">Начало</a> / <span>Что такое Джун</span></p>
+    <h1>Что такое Джун</h1>
+    <p class="lead">Одна строка ввода вместо меню, вкладок и разделов настроек.</p>
+    
+    <div class="text"><p>Джун собирает офисные дела в одном месте: переписку, файлы, документы,
+календарь, поиск. Вместо набора экранов у него одна строка ввода.
+Вы пишете, что хотите сделать, — и получаете ровно то, что нужно для
+этого дела, а не экран со всеми возможностями сразу.</p>
+<h2 id="три-уровня-одной-идеи">Три уровня одной идеи</h2>
+<p><strong>Первый: попасть, куда нужно, с одной фразы.</strong> Джун разбирает фразу и
+открывает нужное представление нужного модуля.</p>
+<p><span class="phrase"><code>уведомления</code> <span class="phrase-arrow">→</span> откроется список уведомлений</span></p>
+<p><strong>Второй: показать только нужные поля.</strong> Если во фразе названо одно
+поле, остальные не показываются. Это называется проекцией.</p>
+<p><span class="phrase"><code>смени имя</code> <span class="phrase-arrow">→</span> откроется профиль с одним полем — именем</span></p>
+<p><strong>Третий: заполнить то, что известно.</strong> Имя собеседника, сегодняшняя
+дата, вы сами как автор — Джун подставляет это сам.</p>
+<p><span class="phrase"><code>напиши Саше и Пете</code> <span class="phrase-arrow">→</span> откроется разговор на троих, с уже названными участниками</span></p>
+<h2 id="что-происходит-после-действия">Что происходит после действия</h2>
+<p>Выполненное дело уходит с экрана. Кадр — то, что Джун открыл под вашу
+фразу, — снимается, и остаётся та же строка ввода. Открытые кадры
+складываются стопкой, их видно в строке над текстом; <code>/выход</code> снимает
+верхний.</p>
+<h2 id="чего-джун-не-делает">Чего Джун не делает</h2>
+<ul>
+<li>Не заменяет бухгалтерию, склад и отраслевые системы: он собирает
+офисные дела, а не считает проводки.</li>
+<li>Не работает как облако: узел живёт в вашей сети, и данные не уходят
+наружу. Исключение одно — фраза, отправленная в Claude, если модель
+подключена; содержимое файлов и документов не уходит и тогда.</li>
+<li>Не показывает сводок и отчётов о людях: журнал ведётся для разбора
+ошибок, а не для наблюдения за сотрудниками.</li>
+</ul>
+<h2 id="две-роли">Две роли</h2>
+<p><strong>Работник</strong> пишет, читает, ищет, заполняет документы. <strong>Администратор</strong>
+делает то же самое и вдобавок заводит сотрудников, подтверждает
+устройства и меняет <a href="../admin/node.html">настройки узла</a>. Первый, кто
+открыл Джуна на новой машине, становится администратором.</p>
+<p>Администратор не видит чужую переписку. Права ограничивают действия, а
+не отменяют личное: это решение продукта, а не недоделка.</p>
+<h2 id="без-сети-и-без-модели">Без сети и без модели</h2>
+<p>Джун разбирает фразы на самой машине. Подключённая модель поднимает
+точность разбора сложных фраз, но её отсутствие — штатный режим, а не
+поломка: в строке состояния это видно как простой режим.</p>
+<p>Что перестаёт работать без сети: ничего из перечисленного в разделе
+<a href="../use/index.html">Работа</a>.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d1%82%d1%80%d0%b8-%d1%83%d1%80%d0%be%d0%b2%d0%bd%d1%8f-%d0%be%d0%b4%d0%bd%d0%be%d0%b9-%d0%b8%d0%b4%d0%b5%d0%b8">Три уровня одной идеи</a></li><li><a href="#%d1%87%d1%82%d0%be-%d0%bf%d1%80%d0%be%d0%b8%d1%81%d1%85%d0%be%d0%b4%d0%b8%d1%82-%d0%bf%d0%be%d1%81%d0%bb%d0%b5-%d0%b4%d0%b5%d0%b9%d1%81%d1%82%d0%b2%d0%b8%d1%8f">Что происходит после действия</a></li><li><a href="#%d1%87%d0%b5%d0%b3%d0%be-%d0%b4%d0%b6%d1%83%d0%bd-%d0%bd%d0%b5-%d0%b4%d0%b5%d0%bb%d0%b0%d0%b5%d1%82">Чего Джун не делает</a></li><li><a href="#%d0%b4%d0%b2%d0%b5-%d1%80%d0%be%d0%bb%d0%b8">Две роли</a></li><li><a href="#%d0%b1%d0%b5%d0%b7-%d1%81%d0%b5%d1%82%d0%b8-%d0%b8-%d0%b1%d0%b5%d0%b7-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8">Без сети и без модели</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

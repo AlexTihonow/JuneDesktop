@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Установка: macOS — Джун</title>
+<meta name="description" content="Распакуйте архив, дважды нажмите на файл june — Джун откроется в браузере. Ни Go, ни терминал для этого не нужны.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section open">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html" aria-current="page">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../start/index.html">Начало</a> / <span>Установка: macOS</span></p>
+    <h1>Установка: macOS</h1>
+    <p class="lead">Распакуйте архив, дважды нажмите на файл june — Джун откроется в браузере. Ни Go, ни терминал для этого не нужны.</p>
+    
+    <div class="text"><h2 id="1-распакуйте-архив">1. Распакуйте архив</h2>
+<p>Положите папку туда, где она останется: в «Программы» или в домашнюю папку. Папку в «Загрузках» удаляют вместе с данными, не заметив.</p>
+<h2 id="2-дважды-нажмите-на-файл-june">2. Дважды нажмите на файл june</h2>
+<p>Откроется окно Терминала, а в браузере — вкладка с Джуном по адресу localhost:7777. Окно Терминала закрывать нельзя: пока оно открыто, Джун работает.</p>
+<h2 id="3-разрешите-запуск-в-первый-раз">3. Разрешите запуск в первый раз</h2>
+<p>macOS сообщит, что не может проверить разработчика: файлы не подписаны сертификатом Apple. Нажмите на файл june правой кнопкой, выберите «Открыть», затем «Открыть» ещё раз в появившемся окне.</p>
+<p>Второй способ — снять пометку загрузки со всей папки. Откройте Терминал в папке пакета и выполните команду:</p>
+<pre><code class="language-bash">xattr -dr com.apple.quarantine .
+</code></pre>
+<h2 id="4-назовите-себя">4. Назовите себя</h2>
+<p>Первый, кто открыл Джуна, становится администратором под именем пользователя системы. Чтобы поменять имя, напишите в строке ввода «смени имя».</p>
+<h2 id="5-откройте-джуна-коллегам-если-нужно">5. Откройте Джуна коллегам, если нужно</h2>
+<p>По умолчанию Джун слушает только эту машину. Чтобы коллеги открывали его по сети, снимите знак # со строки net.lan в файле june.conf, поставьте значение true и перезапустите Джуна.</p>
+<p>При первом запуске с раздачей macOS спросит, разрешить ли входящие подключения для june. Без разрешения коллеги адрес не откроют.</p>
+<p>Адрес для коллег и одноразовый код Джун показывает на экране «Сервер»: напишите в строке ввода «устройства».</p>
+<h2 id="как-остановить">Как остановить</h2>
+<p>Закройте окно Терминала, в котором запущен Джун, или нажмите в нём Ctrl+C.</p>
+<h2 id="где-лежат-данные">Где лежат данные</h2>
+<p>База, файлы и шаблоны лежат в папке data рядом с программой. Резервная копия — это копия папки data целиком; наименьшее, что стоит сохранить, — файл data/june.db.</p>
+<p>Перед копированием остановите Джуна: база пишется в момент копирования, и копия работающей базы может оказаться неполной.</p>
+<h2 id="настройки-запуска">Настройки запуска</h2>
+<p>Рядом с программой лежит файл june.conf. В нём все строки закомментированы знаком # — это значит, что действуют значения по умолчанию. Снимите знак # со строки, чтобы поменять значение.</p>
+<p>Порт, раздача коллегам и папка данных нужны Джуну до того, как он открыл базу, поэтому они живут в файле. Остальное меняется в самом Джуне: скажите строке ввода «настройки узла».</p>
+<p>После правки файла перезапустите Джуна.</p>
+<h2 id="если-порт-занят">Если порт занят</h2>
+<p>Джун не запустится, если порт 7777 занят другой программой или вторым экземпляром Джуна. Снимите знак # со строки net.port в june.conf и укажите другой порт, например 7778.</p>
+<h2 id="обновление">Обновление</h2>
+<p>Новая версия — новый архив. Распакуйте его поверх старой папки: программа заменится, а папка data останется на месте, потому что её в архиве нет.</p>
+<p>Файл june.conf в архиве есть. Если вы его правили, откажитесь от замены, когда распаковщик спросит, или сохраните копию файла заранее.</p>
+<p>Изменения в базе Джун применяет сам при запуске.</p>
+<h2 id="запуск-при-входе-в-систему">Запуск при входе в систему</h2>
+<p>Узел, который раздаёт Джуна коллегам, должен подниматься сам после перезагрузки машины. Администратор говорит строке ввода «запускай при входе» и подтверждает; отменить — «не запускай при входе».</p>
+<p>Автозапуск ставится для текущего пользователя, прав администратора машины не требует и запускает тот файл june, который лежит в этой папке. Переложили папку — скажите фразу ещё раз.</p>
+<h2 id="помощник-центра-вычислений">Помощник центра вычислений</h2>
+<p>Рядом с june лежит june-center. Он нужен только тем, кто отдаёт тяжёлую работу — распознавание сканов, разбор больших файлов — на другую машину. Скопируйте этот файл на ту машину и запустите с кодом, который Джун выдаёт на экране «Центры».</p>
+<p>Для обычной работы Джуна этот файл запускать не нужно.</p>
+<h2 id="распознавание-сканов">Распознавание сканов</h2>
+<p>Текст DOCX, PDF, RTF и ODT Джун читает сам. Чтобы искать по отсканированным документам, на машину узла нужно поставить программу tesseract с русским языком и перезапустить Джуна:</p>
+<pre><code class="language-bash">brew install tesseract tesseract-lang
+</code></pre>
+<h2 id="чужие-данные-внутри-программы">Чужие данные внутри программы</h2>
+<p>Морфология — словарь OpenCorpora (opencorpora.org, CC BY-SA 4.0) в сборке pymorphy3-dicts-ru и код gomorphy (MIT). Шрифты — SIL OFL 1.1.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#1-%d1%80%d0%b0%d1%81%d0%bf%d0%b0%d0%ba%d1%83%d0%b9%d1%82%d0%b5-%d0%b0%d1%80%d1%85%d0%b8%d0%b2">1. Распакуйте архив</a></li><li><a href="#2-%d0%b4%d0%b2%d0%b0%d0%b6%d0%b4%d1%8b-%d0%bd%d0%b0%d0%b6%d0%bc%d0%b8%d1%82%d0%b5-%d0%bd%d0%b0-%d1%84%d0%b0%d0%b9%d0%bb-june">2. Дважды нажмите на файл june</a></li><li><a href="#3-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d1%88%d0%b8%d1%82%d0%b5-%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-%d0%b2-%d0%bf%d0%b5%d1%80%d0%b2%d1%8b%d0%b9-%d1%80%d0%b0%d0%b7">3. Разрешите запуск в первый раз</a></li><li><a href="#4-%d0%bd%d0%b0%d0%b7%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d1%81%d0%b5%d0%b1%d1%8f">4. Назовите себя</a></li><li><a href="#5-%d0%be%d1%82%d0%ba%d1%80%d0%be%d0%b9%d1%82%d0%b5-%d0%b4%d0%b6%d1%83%d0%bd%d0%b0-%d0%ba%d0%be%d0%bb%d0%bb%d0%b5%d0%b3%d0%b0%d0%bc-%d0%b5%d1%81%d0%bb%d0%b8-%d0%bd%d1%83%d0%b6%d0%bd%d0%be">5. Откройте Джуна коллегам, если нужно</a></li><li><a href="#%d0%ba%d0%b0%d0%ba-%d0%be%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%b8%d1%82%d1%8c">Как остановить</a></li><li><a href="#%d0%b3%d0%b4%d0%b5-%d0%bb%d0%b5%d0%b6%d0%b0%d1%82-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5">Где лежат данные</a></li><li><a href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b8-%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba%d0%b0">Настройки запуска</a></li><li><a href="#%d0%b5%d1%81%d0%bb%d0%b8-%d0%bf%d0%be%d1%80%d1%82-%d0%b7%d0%b0%d0%bd%d1%8f%d1%82">Если порт занят</a></li><li><a href="#%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5">Обновление</a></li><li><a href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-%d0%bf%d1%80%d0%b8-%d0%b2%d1%85%d0%be%d0%b4%d0%b5-%d0%b2-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d1%83">Запуск при входе в систему</a></li><li><a href="#%d0%bf%d0%be%d0%bc%d0%be%d1%89%d0%bd%d0%b8%d0%ba-%d1%86%d0%b5%d0%bd%d1%82%d1%80%d0%b0-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d0%b9">Помощник центра вычислений</a></li><li><a href="#%d1%80%d0%b0%d1%81%d0%bf%d0%be%d0%b7%d0%bd%d0%b0%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%81%d0%ba%d0%b0%d0%bd%d0%be%d0%b2">Распознавание сканов</a></li><li><a href="#%d1%87%d1%83%d0%b6%d0%b8%d0%b5-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5-%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d1%8b">Чужие данные внутри программы</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

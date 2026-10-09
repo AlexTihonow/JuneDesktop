@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Все команды — Джун</title>
+<meta name="description" content="Каждый модуль, его слова, представления и поля.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html" aria-current="page">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../reference/index.html">Справочник</a> / <span>Все команды</span></p>
+    <h1>Все команды</h1>
+    <p class="lead">Каждый модуль, его слова, представления и поля.</p>
+    
+    <div class="text"><blockquote>
+<p>Страница собрана из кода. Не правьте её руками: правка пропадёт при следующей сборке. Меняется она там, откуда собрана, — в манифесте модуля, в реестре параметров или в объявлении флага.</p>
+</blockquote>
+<p>Модуль открывается словом из строки ввода. Слова перечислены в строке
+«Как открыть»; работают и они, и фразы из примеров.</p>
+<table>
+<thead>
+<tr>
+<th>Модуль</th>
+<th>Кому доступен</th>
+<th>Как открыть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82-account">Аккаунт</a></td>
+<td>всем</td>
+<td><code>аккаунт</code> · <code>профиль</code> · <code>учётка</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B9-%D0%B2%D0%B8%D0%B4-personalization">Внешний вид</a></td>
+<td>всем</td>
+<td><code>внешний вид</code> · <code>оформление</code> · <code>тема</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-polls">Голосование</a></td>
+<td>всем</td>
+<td><code>голосование</code> · <code>голосования</code> · <code>опрос</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%B4%D0%B8%D1%81%D0%BA-disk">Диск</a></td>
+<td>всем</td>
+<td><code>диск</code> · <code>папки</code> · <code>проводник</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-documents">Документы</a></td>
+<td>всем</td>
+<td><code>документы</code> · <code>документ</code> · <code>шаблоны</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-calendar">Календарь</a></td>
+<td>всем</td>
+<td><code>календарь</code> · <code>расписание</code> · <code>события</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-tags">Метки</a></td>
+<td>всем</td>
+<td><code>метки</code> · <code>метка</code> · <code>теги</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-tutorial">Обучение</a></td>
+<td>всем</td>
+<td><code>обучение</code> · <code>туториал</code> · <code>урок</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D1%83%D0%B7%D0%BB%D0%B0-nodecfg">Параметры узла</a></td>
+<td>только администратор</td>
+<td><code>админка</code> · <code>параметры узла</code> · <code>конфигурация</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D0%BA%D0%B0-messenger">Переписка</a></td>
+<td>всем</td>
+<td><code>переписка</code> · <code>переписки</code> · <code>сообщения</code></td>
+</tr>
+<tr>
+<td><a href="#%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-search">Поиск</a></td>
+<td>всем</td>
+<td><code>поиск</code> · <code>искать</code> · <code>найти</code></td>
+</tr>
+<tr>
+<td><a href="#%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80-server">Сервер</a></td>
+<td>только администратор</td>
+<td><code>сервер</code> · <code>узел</code> · <code>раздача</code></td>
+</tr>
+<tr>
+<td><a href="#%D1%83%D0%B2%D0%B5%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-notifications">Уведомления</a></td>
+<td>всем</td>
+<td><code>уведомления</code> · <code>уведомление</code> · <code>колокольчик</code></td>
+</tr>
+<tr>
+<td><a href="#%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-intake">Файлы</a></td>
+<td>всем</td>
+<td><code>файлы</code> · <code>файл</code> · <code>приём</code></td>
+</tr>
+<tr>
+<td><a href="#%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-purge">Чистка</a></td>
+<td>только администратор</td>
+<td><code>чистка</code> · <code>очистка</code> · <code>сброс</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="аккаунт-account">Аккаунт · <code>account</code></h2>
+<p>Профиль сотрудника: имя, должность, телефон, почта, часовой пояс, код входа. Карточка коллеги — кто это, чем занимается, как связаться. Администратору: список сотрудников, добавление нового, роль и деактивация.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>аккаунт</code> · <code>профиль</code> · <code>учётка</code> · <code>мои данные</code> · <code>мой профиль</code> · <code>мой аккаунт</code> · <code>личные данные</code></p>
+<p><strong>Примеры фраз:</strong> <code>отредактировать аккаунт</code> · <code>смени имя</code> · <code>кто такой Пётр</code> · <code>сотрудники</code> · <code>добавь сотрудника Петра</code></p>
+<h3 id="профиль-edit">Профиль · <code>edit</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Имя</td>
+<td>текст</td>
+<td><code>имя</code> · <code>имени</code> · <code>имя пользователя</code> · <code>как меня зовут</code> · <code>фио</code> · <code>название аккаунта</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Должность</td>
+<td>текст</td>
+<td><code>должность</code> · <code>позиция</code> · <code>кем работаю</code> · <code>специальность</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Роль</td>
+<td>выбор</td>
+<td><code>роль</code> · <code>роли</code> · <code>права</code> · <code>доступ</code> · <code>уровень доступа</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Телефон</td>
+<td>телефон</td>
+<td><code>телефон</code> · <code>номер</code> · <code>мобильный</code> · <code>сотовый</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Почта</td>
+<td>почта</td>
+<td><code>почта</code> · <code>почту</code> · <code>емейл</code> · <code>мейл</code> · <code>электронная почта</code> · <code>адрес почты</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Часовой пояс</td>
+<td>выбор</td>
+<td><code>часовой пояс</code> · <code>пояс</code> · <code>таймзона</code> · <code>время</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Код входа</td>
+<td>пароль</td>
+<td><code>пин</code> · <code>пин-код</code> · <code>код входа</code> · <code>пароль</code> · <code>код</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="карточка-card">Карточка · <code>card</code></h3>
+<h3 id="сотрудники-staff">Сотрудники · <code>staff</code></h3>
+<p>Видят: только администратор.</p>
+<h3 id="новый-сотрудник-invite">Новый сотрудник · <code>invite</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Имя</td>
+<td>текст</td>
+<td><code>имя</code> · <code>имени</code> · <code>имя пользователя</code> · <code>фио</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Должность</td>
+<td>текст</td>
+<td><code>должность</code> · <code>позиция</code> · <code>специальность</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Роль</td>
+<td>выбор</td>
+<td><code>роль</code> · <code>права</code> · <code>доступ</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Телефон</td>
+<td>телефон</td>
+<td><code>телефон</code> · <code>номер</code> · <code>мобильный</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Почта</td>
+<td>почта</td>
+<td><code>почта</code> · <code>почту</code> · <code>емейл</code> · <code>мейл</code> · <code>электронная почта</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h2 id="внешний-вид-personalization">Внешний вид · <code>personalization</code></h2>
+<p>Как выглядит продукт у этого человека: тема (светлая, тёмная или как в системе), палитра (межень, иприт, оксблад, баклажан) и плотность вёрстки. Слово «темы» открывает экран выбора, где палитры показаны образцами. Здесь же слова, которым человек научил систему сам: «называй это …» ставит своё название действию, «забудь …» снимает его.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>внешний вид</code> · <code>оформление</code> · <code>тема</code> · <code>плотность</code> · <code>настройки вида</code> · <code>как выглядит</code></p>
+<p><strong>Примеры фраз:</strong> <code>темы</code> · <code>тёмная тема</code> · <code>палитра иприт</code> · <code>внешний вид</code> · <code>компактный вид</code> · <code>забудь шеф</code></p>
+<h3 id="edit"><code>edit</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Тема</td>
+<td>выбор</td>
+<td><code>тема</code> · <code>освещение</code> · <code>оформление</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Палитра</td>
+<td>выбор</td>
+<td><code>палитра</code> · <code>скин</code> · <code>цвета</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td>выбор</td>
+<td><code>плотность</code> · <code>отступы</code> · <code>вид</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="темы-themes">Темы · <code>themes</code></h3>
+<h3 id="выученные-слова-aliases">Выученные слова · <code>aliases</code></h3>
+<h2 id="голосование-polls">Голосование · <code>polls</code></h2>
+<p>Опросы для группы: вопрос, варианты ответа, срок. Здесь заводят голосование, голосуют одним нажатием, смотрят, кто как проголосовал, и закрывают приём голосов.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>голосование</code> · <code>голосования</code> · <code>опрос</code> · <code>опросы</code> · <code>проголосовать</code></p>
+<p><strong>Примеры фраз:</strong> <code>голосование</code> · <code>заведи опрос когда переносим планёрку</code> · <code>результаты опроса про планёрку</code> · <code>закрой опрос</code></p>
+<h3 id="опросы-list">Опросы · <code>list</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="новый-опрос-create">Новый опрос · <code>create</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Вопрос</td>
+<td>текст</td>
+<td><code>вопрос</code> · <code>о чём</code> · <code>тема</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Варианты</td>
+<td>текст в несколько строк</td>
+<td><code>варианты</code> · <code>ответы</code> · <code>выбор</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Срок</td>
+<td>текст</td>
+<td><code>срок</code> · <code>до какого</code> · <code>когда закрыть</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Можно выбрать несколько</td>
+<td>да или нет</td>
+<td><code>несколько</code> · <code>мультивыбор</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Тайное</td>
+<td>да или нет</td>
+<td><code>тайное</code> · <code>анонимно</code> · <code>без имён</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Кого спрашиваем</td>
+<td>текст</td>
+<td><code>кого</code> · <code>кому</code> · <code>участники</code> · <code>адресаты</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="голосование-vote">Голосование · <code>vote</code></h3>
+<p>Параметры: <code>poll</code> (обязательный).</p>
+<h3 id="результаты-results">Результаты · <code>results</code></h3>
+<p>Параметры: <code>poll</code> (обязательный).</p>
+<h3 id="закрыть-опрос-close">Закрыть опрос · <code>close</code></h3>
+<h2 id="диск-disk">Диск · <code>disk</code></h2>
+<p>Общая папка на диске узла, нарисованная плитками: переход по папкам, папки отделов и личные папки сотрудников, создание папки, загрузка файлов, переименование, удаление в корзину, отправка файла или папки (архивом .zip) коллеге или в группу. Общую папку и отдел каждого сотрудника задаёт администратор; работник видит папку своего отдела и меняет только папки, которые создал сам. Загруженное в папку отдела читают и ищут «Файлы»: документ находится поиском у всего отдела, у отдела есть своя группа в переписке. Файлы, положенные в папки по сети мимо модуля, попадают в поиск после сверки, она идёт раз в 10 минут. Плитки упорядочиваются фразой «по дате», «по имени», «по размеру», «по типу»; выборка документов по карточке: «договоры в финотделе», «счета за август», «сканы петрова»; «разложи по типу» или «разложи по годам» раскладывает файлы папки по подпапкам после подтверждения. На плитке правая кнопка мыши открывает меню действий.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>диск</code> · <code>папки</code> · <code>проводник</code> · <code>папки на диске</code> · <code>файлы на диске</code></p>
+<p><strong>Примеры фраз:</strong> <code>диск</code> · <code>открой папку отчёты</code> · <code>отправь файл договор.pdf Саше</code> · <code>отправь папку отчёты в группу Проект</code> · <code>папка диска ~/Документы</code> · <code>моя папка</code> · <code>создай папку сметы</code> · <code>загрузи в папку сметы</code> · <code>переименуй файл договор.pdf в договор 14.pdf</code> · <code>удали с диска черновик.docx</code> · <code>назначь Петрова в отдел Финотдел</code> · <code>отделы</code> · <code>по дате</code> · <code>договоры в финотделе</code> · <code>счета за август</code> · <code>разложи по типу</code></p>
+<h3 id="диск-browse">Диск · <code>browse</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<p>Параметры: <code>path</code>, <code>q</code>, <code>to</code>, <code>mine</code>, <code>note</code>, <code>n</code>, <code>name</code>, <code>sort</code>.</p>
+<h3 id="отправить-send">Отправить · <code>send</code></h3>
+<p>Параметры: <code>path</code>, <code>q</code>, <code>to</code>, <code>kind</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Кому</td>
+<td>текст</td>
+<td><code>кому</code> · <code>адресат</code> · <code>получатель</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h3 id="папка-диска-root">Папка диска · <code>root</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Папка</td>
+<td>текст</td>
+<td><code>путь</code> · <code>корень</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h3 id="новая-папка-mkdir">Новая папка · <code>mkdir</code></h3>
+<p>Параметры: <code>path</code>, <code>in</code>, <code>name</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Имя папки</td>
+<td>текст</td>
+<td><code>имя</code> · <code>название</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h3 id="загрузить-upload">Загрузить · <code>upload</code></h3>
+<p>Параметры: <code>path</code>, <code>in</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Файлы</td>
+<td>файл</td>
+<td><code>файл</code> · <code>файлы</code> · <code>документ</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h3 id="переименовать-rename">Переименовать · <code>rename</code></h3>
+<p>Параметры: <code>path</code>, <code>q</code>, <code>kind</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Новое имя</td>
+<td>текст</td>
+<td><code>имя</code> · <code>название</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h3 id="удалить-delete">Удалить · <code>delete</code></h3>
+<p>Параметры: <code>path</code>, <code>q</code>, <code>kind</code>.</p>
+<h3 id="порядок-sort">Порядок · <code>sort</code></h3>
+<p>Параметры: <code>by</code>.</p>
+<h3 id="выборка-select">Выборка · <code>select</code></h3>
+<p>Параметры: <code>type</code>, <code>q</code>, <code>sort</code>.</p>
+<h3 id="разложить-arrange">Разложить · <code>arrange</code></h3>
+<p>Параметры: <code>path</code>, <code>in</code>, <code>by</code>, <code>plan</code>, <code>changed</code>.</p>
+<h3 id="отделы-на-диске-assign">Отделы на диске · <code>assign</code></h3>
+<p>Видят: только администратор.</p>
+<p>Параметры: <code>who</code>, <code>folder</code>, <code>q</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сотрудник</td>
+<td>текст</td>
+<td>—</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Папка отдела</td>
+<td>текст</td>
+<td>—</td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h2 id="документы-documents">Документы · <code>documents</code></h2>
+<p>Документы по шаблонам: счета, справки, договоры, акты. Шаблон — файл в папке данных с заголовком, который объявляет поля. Здесь его заполняют — фразой или формой, — смотрят, что вышло, скачивают файлом Word или печатают в PDF из браузера.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>документы</code> · <code>документ</code> · <code>шаблоны</code> · <code>шаблон</code> · <code>бланки</code> · <code>бланк</code> · <code>бумаги</code></p>
+<p><strong>Примеры фраз:</strong> <code>документы</code> · <code>сделай счёт</code> · <code>заполни справку для Петрова</code> · <code>шаблон договора</code></p>
+<h3 id="list"><code>list</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="заполнение-fill">Заполнение · <code>fill</code></h3>
+<p>Параметры: <code>template</code> (обязательный).</p>
+<h3 id="документ-preview">Документ · <code>preview</code></h3>
+<p>Параметры: <code>template</code> (обязательный).</p>
+<h2 id="календарь-calendar">Календарь · <code>calendar</code></h2>
+<p>Что когда: планёрки, отпуска, сроки, выезды. Здесь смотрят ближайшие дни, заводят событие фразой и получают напоминание перед ним. Сроки других модулей попадают сюда сами.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>календарь</code> · <code>расписание</code> · <code>события</code> · <code>планы</code> · <code>повестка</code></p>
+<p><strong>Примеры фраз:</strong> <code>календарь</code> · <code>что сегодня</code> · <code>что на этой неделе</code> · <code>поставь планёрку во вторник в 10</code> · <code>отмени событие планёрка</code></p>
+<h3 id="ближайшее-agenda">Ближайшее · <code>agenda</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="новое-событие-add">Новое событие · <code>add</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Что</td>
+<td>текст</td>
+<td><code>что</code> · <code>название</code> · <code>заголовок</code> · <code>событие</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Когда</td>
+<td>текст</td>
+<td><code>когда</code> · <code>дата</code> · <code>время</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Весь день</td>
+<td>да или нет</td>
+<td><code>весь день</code> · <code>на весь день</code> · <code>целый день</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Кто участвует</td>
+<td>текст</td>
+<td><code>кто</code> · <code>участники</code> · <code>кому</code> · <code>с кем</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Напомнить</td>
+<td>выбор</td>
+<td><code>напомнить</code> · <code>напоминание</code> · <code>за сколько</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Общее для всех</td>
+<td>да или нет</td>
+<td><code>общее</code> · <code>для всех</code> · <code>всей организации</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Подробности</td>
+<td>текст в несколько строк</td>
+<td><code>подробности</code> · <code>описание</code> · <code>заметка</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="событие-entry">Событие · <code>entry</code></h3>
+<p>Параметры: <code>entry</code> (обязательный).</p>
+<h3 id="отмена-события-drop">Отмена события · <code>drop</code></h3>
+<h3 id="месяц-month">Месяц · <code>month</code></h3>
+<h2 id="метки-tags">Метки · <code>tags</code></h2>
+<p>Метки на чём угодно: файл, документ, переписка, событие. Здесь помечают открытое словом, смотрят, что помечено, и снимают метку. Метка ведёт обратно к тому, на чём стоит.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>метки</code> · <code>метка</code> · <code>теги</code> · <code>тег</code> · <code>помеченное</code></p>
+<p><strong>Примеры фраз:</strong> <code>метки</code> · <code>пометь это как срочное</code> · <code>что помечено срочным</code> · <code>сними метку срочное</code></p>
+<h3 id="метки-cloud">Метки · <code>cloud</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="пометить-add">Пометить · <code>add</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Метка</td>
+<td>текст</td>
+<td><code>метка</code> · <code>метку</code> · <code>слово</code> · <code>тег</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Что пометить</td>
+<td>текст</td>
+<td><code>объект</code> · <code>что пометить</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Общая метка</td>
+<td>да или нет</td>
+<td><code>общая</code> · <code>общая метка</code> · <code>для всех</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="помеченное-browse">Помеченное · <code>browse</code></h3>
+<h3 id="помеченное-open">Помеченное · <code>open</code></h3>
+<h3 id="снять-метку-remove">Снять метку · <code>remove</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Метка</td>
+<td>текст</td>
+<td><code>метка</code> · <code>метку</code> · <code>слово</code> · <code>тег</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>С чего снять</td>
+<td>текст</td>
+<td><code>объект</code> · <code>с чего</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="потерянные-метки-sweep">Потерянные метки · <code>sweep</code></h3>
+<h3 id="переименовать-метку-rename">Переименовать метку · <code>rename</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Метка</td>
+<td>текст</td>
+<td><code>старое слово</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Новое слово</td>
+<td>текст</td>
+<td><code>новое слово</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h2 id="обучение-tutorial">Обучение · <code>tutorial</code></h2>
+<p>Короткий курс по самому Джуну: как говорить со строкой ввода, как выйти из режима, как писать коллегам, принимать файлы, искать по содержанию, ставить напоминания. Шаги отмечаются сами, когда человек их выполнил в настоящем модуле.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>обучение</code> · <code>туториал</code> · <code>урок</code> · <code>курс</code> · <code>научи</code> · <code>покажи как</code> · <code>как пользоваться</code> · <code>с чего начать</code> · <code>экскурсия</code></p>
+<p><strong>Примеры фраз:</strong> <code>обучение</code> · <code>научи пользоваться</code> · <code>с чего начать</code> · <code>покажи как писать коллеге</code> · <code>следующий шаг</code> · <code>начать обучение заново</code></p>
+<h3 id="обучение-course">Обучение · <code>course</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="шаг-step">Шаг · <code>step</code></h3>
+<p>Параметры: <code>n</code>, <code>id</code>, <code>do</code>.</p>
+<h3 id="начать-заново-reset">Начать заново · <code>reset</code></h3>
+<h2 id="параметры-узла-nodecfg">Параметры узла · <code>nodecfg</code></h2>
+<p>Параметры всей установки, только для администратора: порт и раздача коллегам в сеть, автозапуск при входе, модель для разбора непонятых фраз (Ollama или Claude) и её ключ, потолки распознавания сканов и текста файлов, журнал администратора, перезапуск узла, выгрузка и загрузка настроек.</p>
+<p>Кому доступен: только администратор.</p>
+<p><strong>Как открыть:</strong> <code>админка</code> · <code>параметры узла</code> · <code>конфигурация</code> · <code>конфигурация узла</code></p>
+<p><strong>Примеры фраз:</strong> <code>настройки узла</code> · <code>порт 8080</code> · <code>открой джуна коллегам</code> · <code>подключи ollama</code> · <code>ключ claude</code> · <code>запускай при входе</code> · <code>перезапусти узел</code> · <code>журнал администратора</code></p>
+<h3 id="параметры-узла-changed">Параметры узла · <code>changed</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<p>Видят: только администратор.</p>
+<h3 id="все-настройки-узла-all">Все настройки узла · <code>all</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Порт</td>
+<td>текст</td>
+<td><code>порт</code> · <code>порт узла</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Открыть коллегам</td>
+<td>выбор</td>
+<td><code>открыть коллегам</code> · <code>коллегам</code> · <code>в сеть</code> · <code>раздавать в сеть</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Имя в сети</td>
+<td>выбор</td>
+<td><code>имя в сети</code> · <code>mdns</code> · <code>june.local</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Запускать при входе</td>
+<td>выбор</td>
+<td><code>автозапуск</code> · <code>запуск при входе</code> · <code>при входе</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Разбор непонятых фраз</td>
+<td>выбор</td>
+<td><code>провайдер</code> · <code>модель для разбора</code> · <code>разбор запросов</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Имя модели</td>
+<td>текст</td>
+<td><code>имя модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Ключ Claude</td>
+<td>пароль</td>
+<td><code>ключ claude</code> · <code>ключ клода</code> · <code>ключ api</code> · <code>ключ модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Адрес модели</td>
+<td>текст</td>
+<td><code>адрес модели</code> · <code>адрес ollama</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Модель векторов</td>
+<td>текст</td>
+<td><code>модель векторов</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Глубина рассуждений</td>
+<td>выбор</td>
+<td><code>глубина рассуждений</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Ожидание ответа модели</td>
+<td>выбор</td>
+<td><code>ожидание модели</code> · <code>таймаут модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько помнить разобранную фразу</td>
+<td>выбор</td>
+<td><code>срок кэша</code> · <code>память фраз</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько фраз помнить</td>
+<td>выбор</td>
+<td><code>размер кэша</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Потолок страниц скана</td>
+<td>текст</td>
+<td><code>страниц скана</code> · <code>потолок страниц</code> · <code>потолок страниц скана</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Заданий одновременно</td>
+<td>выбор</td>
+<td><code>исполнителей</code> · <code>одновременных заданий</code> · <code>заданий одновременно</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Потолок текста из файла, МБ</td>
+<td>выбор</td>
+<td><code>потолок текста</code> · <code>текст из файла</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Показывать документ на экране до, МБ</td>
+<td>выбор</td>
+<td><code>показ документа</code> · <code>документ на экране</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="параметр-узла-param">Параметр узла · <code>param</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Порт</td>
+<td>текст</td>
+<td><code>порт</code> · <code>порт узла</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Открыть коллегам</td>
+<td>выбор</td>
+<td><code>открыть коллегам</code> · <code>коллегам</code> · <code>в сеть</code> · <code>раздавать в сеть</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Имя в сети</td>
+<td>выбор</td>
+<td><code>имя в сети</code> · <code>mdns</code> · <code>june.local</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Запускать при входе</td>
+<td>выбор</td>
+<td><code>автозапуск</code> · <code>запуск при входе</code> · <code>при входе</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Разбор непонятых фраз</td>
+<td>выбор</td>
+<td><code>провайдер</code> · <code>модель для разбора</code> · <code>разбор запросов</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Имя модели</td>
+<td>текст</td>
+<td><code>имя модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Ключ Claude</td>
+<td>пароль</td>
+<td><code>ключ claude</code> · <code>ключ клода</code> · <code>ключ api</code> · <code>ключ модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Адрес модели</td>
+<td>текст</td>
+<td><code>адрес модели</code> · <code>адрес ollama</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Модель векторов</td>
+<td>текст</td>
+<td><code>модель векторов</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Глубина рассуждений</td>
+<td>выбор</td>
+<td><code>глубина рассуждений</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Ожидание ответа модели</td>
+<td>выбор</td>
+<td><code>ожидание модели</code> · <code>таймаут модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько помнить разобранную фразу</td>
+<td>выбор</td>
+<td><code>срок кэша</code> · <code>память фраз</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько фраз помнить</td>
+<td>выбор</td>
+<td><code>размер кэша</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Потолок страниц скана</td>
+<td>текст</td>
+<td><code>страниц скана</code> · <code>потолок страниц</code> · <code>потолок страниц скана</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Заданий одновременно</td>
+<td>выбор</td>
+<td><code>исполнителей</code> · <code>одновременных заданий</code> · <code>заданий одновременно</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Потолок текста из файла, МБ</td>
+<td>выбор</td>
+<td><code>потолок текста</code> · <code>текст из файла</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Показывать документ на экране до, МБ</td>
+<td>выбор</td>
+<td><code>показ документа</code> · <code>документ на экране</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="запуск-и-сеть-net">Запуск и сеть · <code>net</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Порт</td>
+<td>текст</td>
+<td><code>порт</code> · <code>порт узла</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Открыть коллегам</td>
+<td>выбор</td>
+<td><code>открыть коллегам</code> · <code>коллегам</code> · <code>в сеть</code> · <code>раздавать в сеть</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Имя в сети</td>
+<td>выбор</td>
+<td><code>имя в сети</code> · <code>mdns</code> · <code>june.local</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Запускать при входе</td>
+<td>выбор</td>
+<td><code>автозапуск</code> · <code>запуск при входе</code> · <code>при входе</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="разбор-запросов-llm">Разбор запросов · <code>llm</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Разбор непонятых фраз</td>
+<td>выбор</td>
+<td><code>провайдер</code> · <code>модель для разбора</code> · <code>разбор запросов</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Имя модели</td>
+<td>текст</td>
+<td><code>имя модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Ключ Claude</td>
+<td>пароль</td>
+<td><code>ключ claude</code> · <code>ключ клода</code> · <code>ключ api</code> · <code>ключ модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Адрес модели</td>
+<td>текст</td>
+<td><code>адрес модели</code> · <code>адрес ollama</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Модель векторов</td>
+<td>текст</td>
+<td><code>модель векторов</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Глубина рассуждений</td>
+<td>выбор</td>
+<td><code>глубина рассуждений</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Ожидание ответа модели</td>
+<td>выбор</td>
+<td><code>ожидание модели</code> · <code>таймаут модели</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько помнить разобранную фразу</td>
+<td>выбор</td>
+<td><code>срок кэша</code> · <code>память фраз</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько фраз помнить</td>
+<td>выбор</td>
+<td><code>размер кэша</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="распознавание-и-очередь-intake">Распознавание и очередь · <code>intake</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Потолок страниц скана</td>
+<td>текст</td>
+<td><code>страниц скана</code> · <code>потолок страниц</code> · <code>потолок страниц скана</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Заданий одновременно</td>
+<td>выбор</td>
+<td><code>исполнителей</code> · <code>одновременных заданий</code> · <code>заданий одновременно</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="файлы-и-документы-files">Файлы и документы · <code>files</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Потолок текста из файла, МБ</td>
+<td>выбор</td>
+<td><code>потолок текста</code> · <code>текст из файла</code></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Показывать документ на экране до, МБ</td>
+<td>выбор</td>
+<td><code>показ документа</code> · <code>документ на экране</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="журнал-администратора-audit">Журнал администратора · <code>audit</code></h3>
+<p>Видят: только администратор.</p>
+<h3 id="перезапуск-узла-restart">Перезапуск узла · <code>restart</code></h3>
+<p>Видят: только администратор.</p>
+<h3 id="выгрузка-настроек-export">Выгрузка настроек · <code>export</code></h3>
+<p>Видят: только администратор.</p>
+<h3 id="загрузка-настроек-import">Загрузка настроек · <code>import</code></h3>
+<p>Видят: только администратор.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Файл настроек</td>
+<td>файл</td>
+<td>—</td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h2 id="переписка-messenger">Переписка · <code>messenger</code></h2>
+<p>Переписка с коллегами: личная, на нескольких человек и именованные группы. Отправка сообщения, состав участников, упоминания, поиск по сказанному. «Напиши Саше» открывает переписку с человеком, «создай группу» — общую.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>переписка</code> · <code>переписки</code> · <code>сообщения</code> · <code>чат</code> · <code>чаты</code> · <code>диалоги</code> · <code>мессенджер</code></p>
+<p><strong>Примеры фраз:</strong> <code>напиши Саше</code> · <code>создай группу Проект с Сашей и Петей</code> · <code>переписка</code> · <code>найди в переписке отчёт</code></p>
+<h3 id="list-1"><code>list</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="thread"><code>thread</code></h3>
+<p>Параметры: <code>thread</code>, <code>to</code>.</p>
+<h3 id="кому-picker">Кому · <code>picker</code></h3>
+<h3 id="новая-группа-group-new">Новая группа · <code>group_new</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Название</td>
+<td>текст</td>
+<td><code>название</code> · <code>имя группы</code> · <code>как назвать</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Участники</td>
+<td>текст</td>
+<td><code>участники</code> · <code>состав</code> · <code>кто</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h2 id="поиск-search">Поиск · <code>search</code></h2>
+<p>Поиск по содержанию принятых файлов обычной фразой, без синтаксиса. Отвечает списком документов с цитатой и страницей. Умеет сузить уже показанную выдачу по году и по типу документа.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>поиск</code> · <code>искать</code> · <code>найти</code></p>
+<p><strong>Примеры фраз:</strong> <code>найди постановление 412</code> · <code>что у меня есть про аренду участков</code> · <code>покажи документы за 2025 год</code> · <code>оставь только за 2025 год</code></p>
+<h3 id="поиск-query">Поиск · <code>query</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<p>Параметры: <code>q</code>, <code>year</code>, <code>type</code>.</p>
+<h3 id="переиндексировать-reindex">Переиндексировать · <code>reindex</code></h3>
+<h2 id="сервер-server">Сервер · <code>server</code></h2>
+<p>Состояние узла в локальной сети: слушает ли он сеть, по какому адресу и под каким именем его видно, какие устройства подключены. Здесь же выдают одноразовый код подключения, подтверждают новое устройство и отзывают доступ у потерянного.</p>
+<p>Кому доступен: только администратор.</p>
+<p><strong>Как открыть:</strong> <code>сервер</code> · <code>узел</code> · <code>раздача</code> · <code>раздача в сеть</code> · <code>локальная сеть</code> · <code>состояние узла</code> · <code>доступ по сети</code></p>
+<p><strong>Примеры фраз:</strong> <code>сервер</code> · <code>устройства</code> · <code>выдай код подключения</code> · <code>отозвать устройство</code></p>
+<h3 id="status"><code>status</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<p>Видят: только администратор.</p>
+<h3 id="устройства-devices">Устройства · <code>devices</code></h3>
+<p>Видят: только администратор.</p>
+<h3 id="центры-вычислений-centers">Центры вычислений · <code>centers</code></h3>
+<p>Видят: только администратор.</p>
+<h2 id="уведомления-notifications">Уведомления · <code>notifications</code></h2>
+<p>Колокольчик и центр уведомлений: что произошло, пока человека не было. Клик по уведомлению открывает то, к чему оно относится. Умеет поставить напоминание самому себе.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>уведомления</code> · <code>уведомление</code> · <code>колокольчик</code> · <code>оповещения</code> · <code>что нового</code> · <code>непрочитанное</code></p>
+<p><strong>Примеры фраз:</strong> <code>уведомления</code> · <code>что нового</code> · <code>напомни сдать отчёт</code> · <code>прочитать все уведомления</code></p>
+<h3 id="list-2"><code>list</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="open"><code>open</code></h3>
+<h3 id="read"><code>read</code></h3>
+<h3 id="напоминание-remind">Напоминание · <code>remind</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Напомнить</td>
+<td>текст</td>
+<td><code>текст</code> · <code>о чём</code> · <code>напоминание</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h2 id="файлы-intake">Файлы · <code>intake</code></h2>
+<p>Приём файлов: перетащить в окно или выбрать кнопкой, можно пачкой. Система читает текст, распознаёт сканы, называет документ и кладёт его к себе. Разбор идёт заданиями в очереди, поэтому приём не заставляет ждать. Здесь же список принятого, карточка файла и повторный разбор.</p>
+<p>Кому доступен: всем.</p>
+<p><strong>Как открыть:</strong> <code>файлы</code> · <code>файл</code> · <code>приём</code> · <code>приемка</code> · <code>принятое</code> · <code>загруженное</code></p>
+<p><strong>Примеры фраз:</strong> <code>файлы</code> · <code>загрузи файл</code> · <code>распознай сканы</code> · <code>что я загружал вчера</code> · <code>разбери заново</code> · <code>удали файл</code></p>
+<h3 id="принять-файл-drop">Принять файл · <code>drop</code></h3>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Файл</td>
+<td>файл</td>
+<td><code>файл</code> · <code>документ</code></td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<h3 id="файлы-list">Файлы · <code>list</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<h3 id="файл-card">Файл · <code>card</code></h3>
+<p>Параметры: <code>file</code> (обязательный).</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Как назвать в фразе</th>
+<th>Обязательное</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Имя файла</td>
+<td>текст</td>
+<td><code>имя</code> · <code>название</code></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h3 id="удалить-файл-delete">Удалить файл · <code>delete</code></h3>
+<p>Параметры: <code>file</code> (обязательный).</p>
+<h3 id="разобрать-заново-reparse">Разобрать заново · <code>reparse</code></h3>
+<p>Параметры: <code>file</code> (обязательный).</p>
+<h2 id="чистка-purge">Чистка · <code>purge</code></h2>
+<p>Стирает все сохранённые данные установки: сотрудников, уведомления, журнал запросов, выученные слова, настройки и журнал администратора. Остаётся только сам администратор, его устройства и вход. Отменить нельзя.</p>
+<p>Кому доступен: только администратор.</p>
+<p><strong>Как открыть:</strong> <code>чистка</code> · <code>очистка</code> · <code>сброс</code> · <code>очистка данных</code> · <code>сброс данных</code> · <code>чистая установка</code></p>
+<p><strong>Примеры фраз:</strong> <code>чистка</code> · <code>очисти все данные</code> · <code>начать с чистого листа</code></p>
+<h3 id="confirm"><code>confirm</code></h3>
+<p>Открывается, когда названо только имя модуля.</p>
+<p>Видят: только администратор.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d0%b0%d0%ba%d0%ba%d0%b0%d1%83%d0%bd%d1%82-account">Аккаунт · account</a></li><li><a href="#%d0%b2%d0%bd%d0%b5%d1%88%d0%bd%d0%b8%d0%b9-%d0%b2%d0%b8%d0%b4-personalization">Внешний вид · personalization</a></li><li><a href="#%d0%b3%d0%be%d0%bb%d0%be%d1%81%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-polls">Голосование · polls</a></li><li><a href="#%d0%b4%d0%b8%d1%81%d0%ba-disk">Диск · disk</a></li><li><a href="#%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-documents">Документы · documents</a></li><li><a href="#%d0%ba%d0%b0%d0%bb%d0%b5%d0%bd%d0%b4%d0%b0%d1%80%d1%8c-calendar">Календарь · calendar</a></li><li><a href="#%d0%bc%d0%b5%d1%82%d0%ba%d0%b8-tags">Метки · tags</a></li><li><a href="#%d0%be%d0%b1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-tutorial">Обучение · tutorial</a></li><li><a href="#%d0%bf%d0%b0%d1%80%d0%b0%d0%bc%d0%b5%d1%82%d1%80%d1%8b-%d1%83%d0%b7%d0%bb%d0%b0-nodecfg">Параметры узла · nodecfg</a></li><li><a href="#%d0%bf%d0%b5%d1%80%d0%b5%d0%bf%d0%b8%d1%81%d0%ba%d0%b0-messenger">Переписка · messenger</a></li><li><a href="#%d0%bf%d0%be%d0%b8%d1%81%d0%ba-search">Поиск · search</a></li><li><a href="#%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80-server">Сервер · server</a></li><li><a href="#%d1%83%d0%b2%d0%b5%d0%b4%d0%be%d0%bc%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f-notifications">Уведомления · notifications</a></li><li><a href="#%d1%84%d0%b0%d0%b9%d0%bb%d1%8b-intake">Файлы · intake</a></li><li><a href="#%d1%87%d0%b8%d1%81%d1%82%d0%ba%d0%b0-purge">Чистка · purge</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

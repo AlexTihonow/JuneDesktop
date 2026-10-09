@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Параметры узла — Джун</title>
+<meta name="description" content="Всё, что администратор меняет фразой «настройки узла».">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html" aria-current="page">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../reference/index.html">Справочник</a> / <span>Параметры узла</span></p>
+    <h1>Параметры узла <span class="level">администратор</span></h1>
+    <p class="lead">Всё, что администратор меняет фразой «настройки узла».</p>
+    
+    <div class="text"><blockquote>
+<p>Страница собрана из кода. Не правьте её руками: правка пропадёт при следующей сборке. Меняется она там, откуда собрана, — в манифесте модуля, в реестре параметров или в объявлении флага.</p>
+</blockquote>
+<p>Параметры узла меняет администратор фразой «настройки узла». Часть из
+них нужна Джуну до того, как он открыл базу, — они живут в файле
+<a href="june-conf.html">june.conf</a> рядом с программой.</p>
+<p>Сильнее всего флаг запуска, потом переменная окружения, потом
+<code>june.conf</code>, потом значение, заданное администратором, и в самом
+конце — значение по умолчанию.</p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Ключ</th>
+<th>По умолчанию</th>
+<th>Где ещё задаётся</th>
+<th>После перезапуска</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Папка данных</td>
+<td><code>data.dir</code></td>
+<td><code>data</code></td>
+<td><code>--data</code>, <code>june.conf</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Показывать документ на экране до, МБ</td>
+<td><code>docs.max_inline</code></td>
+<td><code>2</code></td>
+<td></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Потолок текста из файла, МБ</td>
+<td><code>files.max_text</code></td>
+<td><code>4</code></td>
+<td></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Потолок страниц скана</td>
+<td><code>intake.ocr_pages</code></td>
+<td><code>200</code></td>
+<td></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Заданий одновременно</td>
+<td><code>intake.workers</code></td>
+<td><code>2</code></td>
+<td></td>
+<td>нет</td>
+</tr>
+<tr>
+<td>Сколько фраз помнить</td>
+<td><code>llm.cache_size</code></td>
+<td><code>1000</code></td>
+<td><code>JUNE_LLM_CACHE_SIZE</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Сколько помнить разобранную фразу</td>
+<td><code>llm.cache_ttl</code></td>
+<td><code>1h</code></td>
+<td><code>JUNE_LLM_CACHE_TTL</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Глубина рассуждений</td>
+<td><code>llm.effort</code></td>
+<td><code>low</code></td>
+<td><code>JUNE_LLM_EFFORT</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Модель векторов</td>
+<td><code>llm.embed_model</code></td>
+<td>—</td>
+<td><code>JUNE_LLM_EMBED_MODEL</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Ключ Claude</td>
+<td><code>llm.key</code></td>
+<td><code>—</code></td>
+<td><code>ANTHROPIC_API_KEY</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Имя модели</td>
+<td><code>llm.model</code></td>
+<td>—</td>
+<td><code>JUNE_LLM_MODEL</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Разбор непонятых фраз</td>
+<td><code>llm.provider</code></td>
+<td><code>off</code></td>
+<td><code>JUNE_LLM</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Ожидание ответа модели</td>
+<td><code>llm.timeout</code></td>
+<td>—</td>
+<td><code>JUNE_LLM_TIMEOUT</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Адрес модели</td>
+<td><code>llm.url</code></td>
+<td>—</td>
+<td><code>JUNE_LLM_URL</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Открыть коллегам</td>
+<td><code>net.lan</code></td>
+<td><code>false</code></td>
+<td><code>--lan</code>, <code>june.conf</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Имя в сети</td>
+<td><code>net.mdns</code></td>
+<td><code>true</code></td>
+<td><code>--mdns</code>, <code>june.conf</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Порт</td>
+<td><code>net.port</code></td>
+<td><code>7777</code></td>
+<td><code>--port</code>, <code>june.conf</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Запускать при входе</td>
+<td><code>node.autostart</code></td>
+<td><code>false</code></td>
+<td></td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
+<h2 id="папка-данных-data-dir">Папка данных · <code>data.dir</code></h2>
+<p>Где лежат база, файлы и шаблоны. Относительный путь считается от папки june.conf, а без файла — от папки программы.</p>
+<h2 id="показывать-документ-на-экране-до-мб-docs-max-inline">Показывать документ на экране до, МБ · <code>docs.max_inline</code></h2>
+<p>Готовый документ больше этого не показывается на экране, а скачивается.</p>
+<p>Возможные значения: <code>1</code> · <code>2</code> · <code>5</code> · <code>10</code>.</p>
+<h2 id="потолок-текста-из-файла-мб-files-max-text">Потолок текста из файла, МБ · <code>files.max_text</code></h2>
+<p>Сколько текста извлекать из одного файла для поиска. Действует для новых файлов.</p>
+<p>Возможные значения: <code>1</code> · <code>2</code> · <code>4</code> · <code>8</code> · <code>16</code>.</p>
+<h2 id="потолок-страниц-скана-intake-ocr-pages">Потолок страниц скана · <code>intake.ocr_pages</code></h2>
+<p>Сколько страниц одного скана распознавать. Число от 1 до 2000; остальные страницы файла ищутся по имени.</p>
+<h2 id="заданий-одновременно-intake-workers">Заданий одновременно · <code>intake.workers</code></h2>
+<p>Сколько файлов узел разбирает сразу. Больше — быстрее пачка сканов и медленнее всё остальное на этой машине.</p>
+<p>Возможные значения: <code>1</code> · <code>2</code> · <code>3</code> · <code>4</code> · <code>5</code> · <code>6</code> · <code>7</code> · <code>8</code>.</p>
+<h2 id="сколько-фраз-помнить-llm-cache-size">Сколько фраз помнить · <code>llm.cache_size</code></h2>
+<p>Сколько разобранных моделью фраз держать в памяти.</p>
+<p>Возможные значения: <code>100</code> · <code>1000</code> · <code>5000</code>.</p>
+<h2 id="сколько-помнить-разобранную-фразу-llm-cache-ttl">Сколько помнить разобранную фразу · <code>llm.cache_ttl</code></h2>
+<p>Повтор фразы в этот срок не идёт к модели второй раз.</p>
+<p>Возможные значения: <code>10m</code> · <code>1h</code> · <code>6h</code> · <code>24h</code>.</p>
+<h2 id="глубина-рассуждений-llm-effort">Глубина рассуждений · <code>llm.effort</code></h2>
+<p>Только для Claude. Для разбора фраз хватает низкой.</p>
+<p>Возможные значения: <code>low</code> · <code>medium</code> · <code>high</code>.</p>
+<h2 id="модель-векторов-llm-embed-model">Модель векторов · <code>llm.embed_model</code></h2>
+<p>Для поиска по смыслу, только у Ollama. Пусто — nomic-embed-text. После смены скажите «переиндексируй».</p>
+<h2 id="ключ-claude-llm-key">Ключ Claude · <code>llm.key</code></h2>
+<p>Хранится в базе узла открытым текстом: резервная копия базы содержит ключ. На экран, в выгрузку и в журнал не попадает.</p>
+<p>Значение секретное: оно не показывается на экране, не попадает в выгрузку настроек и в журнал.</p>
+<h2 id="имя-модели-llm-model">Имя модели · <code>llm.model</code></h2>
+<p>Пусто — модель провайдера по умолчанию: у Claude claude-opus-5, у Ollama qwen2.5:7b-instruct.</p>
+<h2 id="разбор-непонятых-фраз-llm-provider">Разбор непонятых фраз · <code>llm.provider</code></h2>
+<p>Чем разбирать фразу, которую не узнал словарь. Выключено — Джун понимает только знакомые фразы и работает без сети.</p>
+<p>Возможные значения: <code>off</code> · <code>ollama</code> · <code>claude</code>.</p>
+<h2 id="ожидание-ответа-модели-llm-timeout">Ожидание ответа модели · <code>llm.timeout</code></h2>
+<p>Дольше модель не ждём: фраза остаётся непонятой, а строка ввода не замирает.</p>
+<p>Возможные значения: `` · <code>5s</code> · <code>8s</code> · <code>15s</code> · <code>30s</code> · <code>60s</code>.</p>
+<h2 id="адрес-модели-llm-url">Адрес модели · <code>llm.url</code></h2>
+<p>Пусто — Ollama на этой машине (http://127.0.0.1:11434) или API Anthropic для Claude.</p>
+<h2 id="открыть-коллегам-net-lan">Открыть коллегам · <code>net.lan</code></h2>
+<p>Слушать всю локальную сеть, а не только эту машину. Коллеги подключаются по одноразовому коду.</p>
+<h2 id="имя-в-сети-net-mdns">Имя в сети · <code>net.mdns</code></h2>
+<p>Объявлять узел в сети по имени, чтобы коллеги находили его без адреса цифрами. Действует только вместе с раздачей коллегам.</p>
+<h2 id="порт-net-port">Порт · <code>net.port</code></h2>
+<p>Порт, на котором Джун открывается в браузере: адрес вида localhost:7777.</p>
+<h2 id="запускать-при-входе-node-autostart">Запускать при входе · <code>node.autostart</code></h2>
+<p>Открывать Джуна, когда вы входите в систему на этой машине. Без прав администратора машины: launchd на macOS, systemd --user на Linux, ярлык в «Автозагрузке» на Windows.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d0%bf%d0%b0%d0%bf%d0%ba%d0%b0-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d1%85-data-dir">Папка данных · data.dir</a></li><li><a href="#%d0%bf%d0%be%d0%ba%d0%b0%d0%b7%d1%8b%d0%b2%d0%b0%d1%82%d1%8c-%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82-%d0%bd%d0%b0-%d1%8d%d0%ba%d1%80%d0%b0%d0%bd%d0%b5-%d0%b4%d0%be-%d0%bc%d0%b1-docs-max-inline">Показывать документ на экране до, МБ · docs.max_inline</a></li><li><a href="#%d0%bf%d0%be%d1%82%d0%be%d0%bb%d0%be%d0%ba-%d1%82%d0%b5%d0%ba%d1%81%d1%82%d0%b0-%d0%b8%d0%b7-%d1%84%d0%b0%d0%b9%d0%bb%d0%b0-%d0%bc%d0%b1-files-max-text">Потолок текста из файла, МБ · files.max_text</a></li><li><a href="#%d0%bf%d0%be%d1%82%d0%be%d0%bb%d0%be%d0%ba-%d1%81%d1%82%d1%80%d0%b0%d0%bd%d0%b8%d1%86-%d1%81%d0%ba%d0%b0%d0%bd%d0%b0-intake-ocr-pages">Потолок страниц скана · intake.ocr_pages</a></li><li><a href="#%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b9-%d0%be%d0%b4%d0%bd%d0%be%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d0%be-intake-workers">Заданий одновременно · intake.workers</a></li><li><a href="#%d1%81%d0%ba%d0%be%d0%bb%d1%8c%d0%ba%d0%be-%d1%84%d1%80%d0%b0%d0%b7-%d0%bf%d0%be%d0%bc%d0%bd%d0%b8%d1%82%d1%8c-llm-cache-size">Сколько фраз помнить · llm.cache_size</a></li><li><a href="#%d1%81%d0%ba%d0%be%d0%bb%d1%8c%d0%ba%d0%be-%d0%bf%d0%be%d0%bc%d0%bd%d0%b8%d1%82%d1%8c-%d1%80%d0%b0%d0%b7%d0%be%d0%b1%d1%80%d0%b0%d0%bd%d0%bd%d1%83%d1%8e-%d1%84%d1%80%d0%b0%d0%b7%d1%83-llm-cache-ttl">Сколько помнить разобранную фразу · llm.cache_ttl</a></li><li><a href="#%d0%b3%d0%bb%d1%83%d0%b1%d0%b8%d0%bd%d0%b0-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9-llm-effort">Глубина рассуждений · llm.effort</a></li><li><a href="#%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d1%8c-%d0%b2%d0%b5%d0%ba%d1%82%d0%be%d1%80%d0%be%d0%b2-llm-embed-model">Модель векторов · llm.embed_model</a></li><li><a href="#%d0%ba%d0%bb%d1%8e%d1%87-claude-llm-key">Ключ Claude · llm.key</a></li><li><a href="#%d0%b8%d0%bc%d1%8f-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8-llm-model">Имя модели · llm.model</a></li><li><a href="#%d1%80%d0%b0%d0%b7%d0%b1%d0%be%d1%80-%d0%bd%d0%b5%d0%bf%d0%be%d0%bd%d1%8f%d1%82%d1%8b%d1%85-%d1%84%d1%80%d0%b0%d0%b7-llm-provider">Разбор непонятых фраз · llm.provider</a></li><li><a href="#%d0%be%d0%b6%d0%b8%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%be%d1%82%d0%b2%d0%b5%d1%82%d0%b0-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8-llm-timeout">Ожидание ответа модели · llm.timeout</a></li><li><a href="#%d0%b0%d0%b4%d1%80%d0%b5%d1%81-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8-llm-url">Адрес модели · llm.url</a></li><li><a href="#%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d1%8c-%d0%ba%d0%be%d0%bb%d0%bb%d0%b5%d0%b3%d0%b0%d0%bc-net-lan">Открыть коллегам · net.lan</a></li><li><a href="#%d0%b8%d0%bc%d1%8f-%d0%b2-%d1%81%d0%b5%d1%82%d0%b8-net-mdns">Имя в сети · net.mdns</a></li><li><a href="#%d0%bf%d0%be%d1%80%d1%82-net-port">Порт · net.port</a></li><li><a href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba%d0%b0%d1%82%d1%8c-%d0%bf%d1%80%d0%b8-%d0%b2%d1%85%d0%be%d0%b4%d0%b5-node-autostart">Запускать при входе · node.autostart</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>

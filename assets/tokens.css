@@ -1,0 +1,367 @@
+/* Палитра и метрики отдельным файлом: тема меняется переопределением
+   переменных, а не отдельными классами (CONTRACT.md, раздел 6).
+
+   Основная палитра — «Межень»: приглушённый синий, серо-стальные, рамка
+   у каждого блока. Три прежних направления оставлены палитрами-скинами:
+   ставятся атрибутом data-skin на <html>.
+
+   Каждая палитра перечислена один раз и применяется двумя способами:
+   селектором с :root — как выбор человека, селектором [data-palette] —
+   как образец на экране «Темы». Второй селектор и есть причина списка:
+   образец, покрашенный литеральными цветами, разъехался бы с настоящей
+   палитрой в первый же день, когда кто-нибудь поправит здесь оттенок.
+
+   ПОРЯДОК БЛОКОВ ЗНАЧИМ. Скины объявлены выше тёмной темы и с той же
+   специфичностью, поэтому тёмная их перебивает — и в явном виде, и в
+   системном. Так и задумано: тёмную выбирают ради глаз, а не ради
+   оттенка, и держать восемь палитр вместо двух незачем. Переставите
+   блоки местами — сломаете тёмную тему; на это смотрит тест
+   TestDarkThemeOverridesSkins.
+
+   Шрифты вшиты: web/static/fonts/*.woff2 попадают в бинарь тем же
+   //go:embed static, что и остальная статика. Файла нет — @font-face
+   молча пропускается, действует system-ui, вёрстка не ломается. */
+
+/* ── Шрифты ─────────────────────────────────────────────────────────
+   Гарнитура — часть скина, а не отдельная настройка: палитра и шрифт
+   вместе решают, как продукт выглядит, и выбираются одним нажатием.
+
+   Вшиты ровно те начертания, которые скин использует. Unbounded стоит
+   83 КБ и работает только в заголовках «Иприта» — поэтому у него одно
+   начертание, а не шесть.
+
+   Кириллица и латиница в одном файле, без unicode-range: разбиение по
+   подмножествам экономит трафик, которого у local-first продукта нет —
+   файл уже лежит в бинаре рядом с браузером.
+
+   Собрано из вариативных исходников Google Fonts. Лицензии — OFL-*.txt
+   рядом со шрифтами, как пересобрать — web/static/VENDORED.md. */
+
+/* «Межень» целиком и мелочь «Оксблада»: подписи, время, метки. */
+@font-face {
+  font-family: "Onest";
+  src: url("fonts/onest-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("fonts/onest-500.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("fonts/onest-600.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("fonts/onest-700.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* Только заголовки и бейджи «Иприта» — оттого одно начертание. */
+@font-face {
+  font-family: "Unbounded";
+  src: url("fonts/unbounded-800.woff2") format("woff2");
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+
+/* Текст, подписи и чипы «Иприта». */
+@font-face {
+  font-family: "Golos Text";
+  src: url("fonts/golos-text-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("fonts/golos-text-500.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("fonts/golos-text-600.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("fonts/golos-text-700.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* «Оксблад»: заголовки, текст сообщений, названия документов.
+   Курсив вшит, а не досинтезирован: у настоящего курсива Piazzolla другие
+   буквы, а не наклонённые прямые. */
+@font-face {
+  font-family: "Piazzolla";
+  src: url("fonts/piazzolla-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Piazzolla";
+  src: url("fonts/piazzolla-600.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Piazzolla";
+  src: url("fonts/piazzolla-800.woff2") format("woff2");
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Piazzolla";
+  src: url("fonts/piazzolla-400-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Piazzolla";
+  src: url("fonts/piazzolla-600-italic.woff2") format("woff2");
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Piazzolla";
+  src: url("fonts/piazzolla-800-italic.woff2") format("woff2");
+  font-weight: 800; font-style: italic; font-display: swap;
+}
+
+/* «Баклажан»: заголовки, шапки, кнопки, метки. */
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/oswald-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/oswald-500.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/oswald-600.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+
+/* ── Метрики ────────────────────────────────────────────────────────
+   Отдельно от цвета: образцу палитры метрики переопределять незачем. */
+:root {
+  color-scheme: light dark;
+
+  /* Радиусы почти сняты: форму держит рамка, а не скругление. */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 48px;
+
+  /* Три роли, а не одна гарнитура на всё: заголовок, тело и мелочь
+     (метки, чипы, кнопки, время) в скинах расходятся — где-то тело и
+     заголовок набраны одним шрифтом, где-то тремя разными. В «Межени»
+     все три роли — Onest, и это тоже решение, а не отсутствие выбора. */
+  --font-fallback: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Onest", var(--font-fallback);
+  --font-ui:      "Onest", var(--font-fallback);
+  --font-meta:    "Onest", var(--font-fallback);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+  --bar-width: 640px;
+}
+
+/* ── Межень ─────────────────────────────────────────────────────────
+   Светлая по умолчанию. Она же образец «Межень» и образец «Светлая» на
+   экране выбора: одна палитра, три места применения. */
+:root,
+[data-palette="mezhen"],
+[data-palette="light"] {
+  --c-bg:            #f1f4f7;
+  --c-surface:       #ffffff;
+  --c-border:        #c7d1db;
+  /* Контур строки ввода и главных блоков: он и есть «чёткая граница». */
+  --c-border-strong: #16202b;
+  --c-text:          #16202b;
+  --c-text-muted:    #566575;
+  --c-accent:        #2e4c6b;
+  --c-accent-fg:     #ffffff;
+  /* Второй, спокойный синий: вопрос подтверждения, вторичные метки. */
+  --c-signal:        #6e8aa6;
+  --c-ghost:         #6b7a8a;
+  --c-danger:        #8c2f2a;
+  --c-warn:          #7a5a12;
+  --c-ok:            #2e4c6b;
+}
+
+/* ── Скины ──────────────────────────────────────────────────────────
+   Не темы: меняют цвет и гарнитуру, разметку и метрики не трогают.
+   Цвет объявлен здесь, шрифт — ниже отдельным блоком: применяются они
+   в разных местах.
+
+   Условия на тему в селекторе нет сознательно. Тема по умолчанию — «как
+   в системе», то есть атрибута data-theme на странице обычно нет вовсе;
+   требуй селектор явной светлой темы, и человек выбрал бы палитру и не
+   увидел ничего. Отступают скины ниже — в блоках тёмной темы. */
+
+/* Иприт: болотная зелень и охра, контур толще. */
+:root[data-skin="ipritt"],
+[data-palette="ipritt"] {
+  --c-bg:            #f1eee2;
+  --c-surface:       #f7f5ea;
+  --c-border:        #cfcbb6;
+  --c-border-strong: #1d1c12;
+  --c-text:          #1d1c12;
+  --c-text-muted:    #6a6759;
+  --c-accent:        #4f5a10;
+  --c-accent-fg:     #f1eee2;
+  --c-signal:        #7d6a00;
+  --c-ghost:         #85826d;
+  --c-danger:        #7a2e12;
+  --c-warn:          #7d6a00;
+  --c-ok:            #4f5a10;
+}
+
+/* Оксблад: тёмная кровь и кирпич, линии-волосинки. */
+:root[data-skin="oxblood"],
+[data-palette="oxblood"] {
+  --c-bg:            #f4efeb;
+  --c-surface:       #ffffff;
+  --c-border:        #d8ccc5;
+  --c-border-strong: #1a1012;
+  --c-text:          #1a1012;
+  --c-text-muted:    #6e5b57;
+  --c-accent:        #6e1f27;
+  --c-accent-fg:     #f4efeb;
+  --c-signal:        #a8442f;
+  --c-ghost:         #8a736d;
+  --c-danger:        #8c2f2a;
+  --c-warn:          #8a5a1c;
+  --c-ok:            #6e1f27;
+}
+
+/* Баклажан: глухой фиолет, форму держит заливка. */
+:root[data-skin="aubergine"],
+[data-palette="aubergine"] {
+  --c-bg:            #efecf0;
+  --c-surface:       #ffffff;
+  --c-border:        #d2cbd6;
+  --c-border-strong: #17121b;
+  --c-text:          #17121b;
+  --c-text-muted:    #665f6e;
+  --c-accent:        #46184f;
+  --c-accent-fg:     #efecf0;
+  --c-signal:        #7b3f86;
+  --c-ghost:         #8d8695;
+  --c-danger:        #8c2f2a;
+  --c-warn:          #7a5a12;
+  --c-ok:            #46184f;
+}
+
+/* ── Шрифты скинов ──────────────────────────────────────────────────
+   Отдельно от цвета, потому что доезжают они не одинаково: цвет нужен и
+   образцу на экране «Темы» ([data-palette]), а шрифту там показать себя
+   негде — образец нарисован полосками, буквы в нём нет.
+
+   Блок стоит выше тёмной темы намеренно, как и палитры: в тёмной
+   действует «Межень» целиком, гарнитура уходит вместе с цветом. Ровно
+   это обещает экран тем, и обещание держится в одном месте. */
+
+/* Иприт: Unbounded 800 на заголовках и бейджах, Golos Text на остальном. */
+:root[data-skin="ipritt"] {
+  --font-display: "Unbounded", "Onest", var(--font-fallback);
+  --font-ui:      "Golos Text", "Onest", var(--font-fallback);
+  --font-meta:    "Golos Text", "Onest", var(--font-fallback);
+}
+
+/* Оксблад: Piazzolla держит и заголовок, и текст сообщения — единственный
+   скин без смены гарнитуры между ними. Onest остаётся на мелочи: время,
+   метки, подписи, где засечки на 11 пикселях только мешают.
+
+   Onest вторым в цепочке — не запасная гарнитура, а запасной глиф:
+   галочки ✓ у Piazzolla нет, и без этой строки она уехала бы в
+   системный шрифт, разный на каждой машине. */
+:root[data-skin="oxblood"] {
+  --font-display: "Piazzolla", "Onest", Georgia, serif;
+  --font-ui:      "Piazzolla", "Onest", Georgia, serif;
+  --font-meta:    "Onest", var(--font-fallback);
+}
+
+/* Баклажан: Oswald на заголовках, шапке, кнопках и метках. Тело абзаца —
+   Onest: узкий гротеск хорош строкой в двадцать знаков и плох абзацем. */
+:root[data-skin="aubergine"] {
+  --font-display: "Oswald", "Onest", var(--font-fallback);
+  --font-ui:      "Onest", var(--font-fallback);
+  --font-meta:    "Oswald", "Onest", var(--font-fallback);
+}
+
+/* ── Тёмная ─────────────────────────────────────────────────────────
+   Ниже скинов и потому сильнее их: выбранная палитра отступает, пока
+   темно. Она вернётся, как только человек выберет светлую, — настройка
+   не теряется, она просто не действует.
+
+   Палитра повторяется дословно: в обычном CSS нельзя объединить
+   селектор внутри @media с селектором снаружи, а препроцессора в
+   проекте нет. */
+
+/* Системная тема действует, пока человек не выбрал явно светлую. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-bg:            #10161d;
+    --c-surface:       #161f28;
+    --c-border:        #2b3946;
+    --c-border-strong: #c7d1db;
+    --c-text:          #e6ecf2;
+    --c-text-muted:    #93a2b1;
+    --c-accent:        #7fa3c4;
+    --c-accent-fg:     #0e1620;
+    --c-signal:        #4d647c;
+    --c-ghost:         #5d6b79;
+    --c-danger:        #d98a80;
+    --c-warn:          #cfa85c;
+    --c-ok:            #7fa3c4;
+
+    /* Гарнитура возвращается вместе с палитрой: тёмную выбирают ради
+       глаз, и «Межень» в ней действует целиком, а не наполовину. */
+    --font-display: "Onest", var(--font-fallback);
+    --font-ui:      "Onest", var(--font-fallback);
+    --font-meta:    "Onest", var(--font-fallback);
+  }
+}
+
+/* Явный выбор темы побеждает системный (модуль персонализации). */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"]  { color-scheme: dark; }
+
+:root[data-theme="dark"],
+[data-palette="dark"] {
+  --c-bg:            #10161d;
+  --c-surface:       #161f28;
+  --c-border:        #2b3946;
+  --c-border-strong: #c7d1db;
+  --c-text:          #e6ecf2;
+  --c-text-muted:    #93a2b1;
+  --c-accent:        #7fa3c4;
+  --c-accent-fg:     #0e1620;
+  --c-signal:        #4d647c;
+  --c-ghost:         #5d6b79;
+  --c-danger:        #d98a80;
+  --c-warn:          #cfa85c;
+  --c-ok:            #7fa3c4;
+
+  /* Гарнитура возвращается вместе с палитрой: тёмную выбирают ради
+     глаз, и «Межень» в ней действует целиком, а не наполовину. */
+  --font-display: "Onest", var(--font-fallback);
+  --font-ui:      "Onest", var(--font-fallback);
+  --font-meta:    "Onest", var(--font-fallback);
+}
+
+/* Плотность: та же вёрстка, другие отступы. Крупные шаги ужимаются,
+   мелкие остаются — иначе текст слипается с рамкой. */
+:root[data-density="compact"] {
+  --space-4:  8px;
+  --space-5: 12px;
+  --space-6: 16px;
+  --space-7: 24px;
+  --space-8: 32px;
+}

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Представления — Джун</title>
+<meta name="description" content="Виды представлений, подготовка данных и отправка формы.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-base="../">
+<a class="skip" href="#текст">Перейти к тексту</a>
+
+<header class="top">
+  <a class="brand" href="../index.html">Джун</a>
+  <div class="find">
+    <input id="q" type="search" placeholder="Поиск по документации" autocomplete="off"
+           aria-label="Поиск по документации" aria-expanded="false" aria-controls="found">
+    <ul id="found" hidden></ul>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="side" aria-label="Разделы">
+    <ul>
+    
+      <li class="section">
+        <a href="../start/index.html">Начало</a>
+        <ul>
+          <li><a href="../start/what.html">Что такое Джун</a></li>
+          <li><a href="../start/install-macos.html">Установка: macOS</a></li>
+          <li><a href="../start/install-windows.html">Установка: Windows</a></li>
+          <li><a href="../start/install-linux.html">Установка: Linux</a></li>
+          <li><a href="../start/first-run.html">Первый запуск</a></li>
+          <li><a href="../start/share.html">Раздать коллегам</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../use/index.html">Работа</a>
+        <ul>
+          <li><a href="../use/bar.html">Строка ввода</a></li>
+          <li><a href="../use/messenger.html">Переписка</a></li>
+          <li><a href="../use/notifications.html">Уведомления</a></li>
+          <li><a href="../use/documents.html">Документы</a></li>
+          <li><a href="../use/intake.html">Файлы</a></li>
+          <li><a href="../use/search.html">Поиск</a></li>
+          <li><a href="../use/tags.html">Метки</a></li>
+          <li><a href="../use/calendar.html">Календарь</a></li>
+          <li><a href="../use/polls.html">Голосование</a></li>
+          <li><a href="../use/disk.html">Диск</a></li>
+          <li><a href="../use/personalization.html">Внешний вид</a></li>
+          <li><a href="../use/tutorial.html">Обучение</a></li>
+          <li><a href="../use/account.html">Аккаунт</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../admin/index.html">Администрирование</a>
+        <ul>
+          <li><a href="../admin/staff.html">Сотрудники и роли</a></li>
+          <li><a href="../admin/devices.html">Устройства</a></li>
+          <li><a href="../admin/node.html">Настройки узла</a></li>
+          <li><a href="../admin/model.html">Модель: Claude и Ollama</a></li>
+          <li><a href="../admin/ocr.html">Распознавание сканов</a></li>
+          <li><a href="../admin/centers.html">Центры вычислений</a></li>
+          <li><a href="../admin/backup.html">Резервная копия и перенос</a></li>
+          <li><a href="../admin/update.html">Обновление</a></li>
+          <li><a href="../admin/purge.html">Чистка</a></li>
+          <li><a href="../admin/journal.html">Журнал администратора</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../reference/index.html">Справочник</a>
+        <ul>
+          <li><a href="../reference/commands.html">Все команды</a></li>
+          <li><a href="../reference/keys.html">Горячие клавиши</a></li>
+          <li><a href="../reference/flags.html">Флаги запуска</a></li>
+          <li><a href="../reference/env.html">Переменные окружения</a></li>
+          <li><a href="../reference/node.html">Параметры узла</a></li>
+          <li><a href="../reference/june-conf.html">Файл june.conf</a></li>
+          <li><a href="../reference/fields.html">Типы полей</a></li>
+          <li><a href="../reference/errors.html">Коды ошибок</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section open">
+        <a href="../module/index.html">Свой модуль</a>
+        <ul>
+          <li><a href="../module/what.html">Что такое модуль</a></li>
+          <li><a href="../module/create.html">Создать</a></li>
+          <li><a href="../module/manifest.html">Манифест</a></li>
+          <li><a href="../module/views.html" aria-current="page">Представления</a></li>
+          <li><a href="../module/fields.html">Поля и права</a></li>
+          <li><a href="../module/phrases.html">Фразы</a></li>
+          <li><a href="../module/tables.html">Таблицы и оформление</a></li>
+          <li><a href="../module/lowui.html">Правила Low-UI для модуля</a></li>
+          <li><a href="../module/check.html">Проверить и подключить</a></li>
+          
+        </ul>
+      </li>
+    
+      <li class="section">
+        <a href="../help/index.html">Решение проблем</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../glossary/index.html">Словарь</a>
+        
+      </li>
+    
+      <li class="section">
+        <a href="../changes/index.html">Изменения</a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+  <main id="текст">
+    <p class="crumbs"><a href="../index.html">Джун</a> / <a href="../module/index.html">Свой модуль</a> / <span>Представления</span></p>
+    <h1>Представления <span class="level">автор модуля</span></h1>
+    <p class="lead">Виды представлений, подготовка данных и отправка формы.</p>
+    
+    <div class="text"><p>Представление — это экран модуля. У каждого есть вид, заголовок и пара
+функций — <code>Load</code> и <code>Submit</code>.</p>
+<pre><code class="language-go">{
+	ID:          &quot;add&quot;,
+	Kind:        contract.Form,
+	Title:       &quot;Новая задача&quot;,
+	TextCapture: contract.CaptureNone,
+	Load:        loadAdd,
+	Submit:      submitAdd,
+	Fields:      []contract.FieldSpec{ /* ... */ },
+}
+</code></pre>
+<h2 id="виды">Виды</h2>
+<table>
+<thead>
+<tr>
+<th>Вид</th>
+<th>Что это</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contract.Form</code></td>
+<td>форма из объявленных полей</td>
+</tr>
+<tr>
+<td><code>contract.List</code></td>
+<td>список со своим шаблоном</td>
+</tr>
+<tr>
+<td><code>contract.Detail</code></td>
+<td>карточка одной вещи</td>
+</tr>
+<tr>
+<td><code>contract.Thread</code></td>
+<td>лента сообщений</td>
+</tr>
+<tr>
+<td><code>contract.Picker</code></td>
+<td>выбор одного из многих</td>
+</tr>
+<tr>
+<td><code>contract.Custom</code></td>
+<td>своя разметка целиком</td>
+</tr>
+</tbody>
+</table>
+<h2 id="load"><code>Load</code></h2>
+<p><code>Load</code> готовит данные. Он получает <code>Ctx</code>: база, пользователь,
+параметры фразы, время, шина событий.</p>
+<pre><code class="language-go">func loadAdd(ctx contract.Ctx) (contract.ViewData, error) {
+	return contract.ViewData{
+		Title: &quot;Новая задача&quot;,
+		Values: map[string]string{
+			&quot;text&quot;: strings.TrimSpace(ctx.Param(&quot;text&quot;)),
+			&quot;due&quot;:  ctx.Now.Format(&quot;02.01.2006&quot;),
+			&quot;who&quot;:  ctx.User.DisplayName,
+		},
+	}, nil
+}
+</code></pre>
+<p><code>Values</code> — предзаполнение формы, <code>Items</code> — данные для списка, <code>Extra</code> —
+всё остальное, что нужно вашему шаблону.</p>
+<h2 id="submit"><code>Submit</code></h2>
+<p><code>Submit</code> выполняет действие и говорит, что дальше.</p>
+<pre><code class="language-go">func submitAdd(ctx contract.Ctx, values map[string]string) (contract.SubmitResult, error) {
+	text := strings.TrimSpace(values[&quot;text&quot;])
+	if text == &quot;&quot; {
+		return contract.SubmitResult{
+			Errors: map[string]string{&quot;text&quot;: &quot;Напишите, что нужно сделать.&quot;},
+		}, nil
+	}
+	if _, err := add(ctx, Task{Text: text}); err != nil {
+		return contract.SubmitResult{}, err
+	}
+	return contract.SubmitResult{Message: &quot;Задача заведена.&quot;, Pop: true}, nil
+}
+</code></pre>
+<p><code>Errors</code> перерисовывает форму с ошибками у полей. <code>Pop</code> сворачивает
+кадр после успеха — это и есть исчезновение после действия. <code>Next</code>
+отправляет человека в другое представление, если сворачивать рано.</p>
+<h2 id="чей-текст-в-строке-ввода">Чей текст в строке ввода</h2>
+<p><code>TextCapture</code> отвечает на вопрос, что происходит, когда человек пишет в
+строку, пока открыто ваше представление:</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что происходит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CaptureNone</code></td>
+<td>весь текст идёт в разбор фраз: человек уходит в другой модуль</td>
+</tr>
+<tr>
+<td><code>CaptureFull</code></td>
+<td>весь текст принадлежит модулю, команды идут со слэша</td>
+</tr>
+<tr>
+<td><code>CaptureHybrid</code></td>
+<td>сначала разбор; если он не уверен — текст ваш</td>
+</tr>
+</tbody>
+</table>
+<p><code>CaptureFull</code> нужен переписке: сообщение не должно улетать в
+маршрутизатор. Для большинства модулей верно <code>CaptureNone</code>.</p>
+<h2 id="выход">Выход</h2>
+<p>Модулю не нужно думать про <code>/выход</code>: кадр снимает оболочка, и никакого
+состояния «текущий экран» у модуля нет.</p>
+<h2 id="что-дальше">Что дальше</h2>
+<p>Поля формы и права на них — страница <a href="fields.html">Поля и права</a>.
+Перечень типов полей — справочник: <a href="../reference/fields.html">Типы полей</a>.</p>
+</div>
+  </main>
+
+  <nav class="toc" aria-label="На этой странице">
+    <p>На этой странице</p>
+    <ul><li><a href="#%d0%b2%d0%b8%d0%b4%d1%8b">Виды</a></li><li><a href="#load">Load</a></li><li><a href="#submit">Submit</a></li><li><a href="#%d1%87%d0%b5%d0%b9-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2-%d1%81%d1%82%d1%80%d0%be%d0%ba%d0%b5-%d0%b2%d0%b2%d0%be%d0%b4%d0%b0">Чей текст в строке ввода</a></li><li><a href="#%d0%b2%d1%8b%d1%85%d0%be%d0%b4">Выход</a></li><li><a href="#%d1%87%d1%82%d0%be-%d0%b4%d0%b0%d0%bb%d1%8c%d1%88%d0%b5">Что дальше</a></li></ul>
+  </nav>
+</div>
+
+<footer class="bottom">
+  <p>Джун — локальный мультитул офисных сервисов. Документация описывает то, как он работает сейчас.</p>
+</footer>
+
+<script src="../assets/search.js" defer></script>
+</body>
+</html>
